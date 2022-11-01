@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document admin</title>
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <script defer src="../js/jquery-3.6.0.js"></script>
+
+</head>
+
+<body>
+    <!-- 기본정보 -->
+
+    <div id="wrap">
+        <div class="container-fluid row" style="flex-wrap:nowrap;">
+            <!-- 사이드바 -->
+            <div class="side-bar d-flex flex-column flex-shrink-0 p-3 scrollarea">
+                <a href="/" class="d-flex align-items-center text-white text-decoration-none">
+                    <span class="fs-4" style="width:50px;"><img class="img-fluid" src="../images/logo.svg" alt=""
+                            style="filter: invert(100%);"></span>
+                </a>
+                <hr>
+                <ul class="list-unstyled ps-0">
+                    <li class="mb-1 line-top">
+                        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                            data-bs-toggle="collapse" data-bs-target="#info-collapse" aria-expanded="true">
+                            판매자 정보
+                        </button>
+                        <div class="collapse show" id="info-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li class="active"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">기본정보</a>
+                                </li>
+                                <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">상품관리</a>
+                                </li>
+                                <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">매니저관리</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="mb-1 line-top">
+                        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                            data-bs-toggle="collapse" data-bs-target="#prd-collapse" aria-expanded="true">
+                            상품 관리
+                        </button>
+                        <div class="collapse show" id="prd-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">기본정보</a>
+                                </li>
+                                <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">상품관리</a>
+                                </li>
+                                <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">매니저관리</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- 컨텐츠 -->
+            <section class="content_area p-5">
+                <div class="shadow p-3 rounded">
+                    <h5 class="font-weight-bold">주문 및 배송</h5>
+                    <div class="d-flex">
+                        <dl class="col-3 d-flex p-0 mb-0">
+                            <dt>신규주문</dt>
+                            <dd class="ml-2"><a href="">1</a>건</dd>
+                        </dl>
+                        <dl class="col-3 d-flex p-0 mb-0">
+                            <dt>신규주문</dt>
+                            <dd class="ml-2"><a href="">1</a>건</dd>
+                        </dl>
+                        <dl class="col-3 d-flex p-0 mb-0">
+                            <dt>신규주문</dt>
+                            <dd class="ml-2"><a href="">1</a>건</dd>
+                        </dl>
+                    </div>
+                </div>
+
+                <div class="shadow p-3 rounded mt-4">
+                    <div class="d-flex justify-content-between">
+                        <h5 class="font-weight-bold">공지사항</h5>
+                        <a href="" class="text-dark">더보기 ></a>
+                    </div>
+                    <ul class="p-0">
+                        <li class="list-unstyled border-top">
+                            <a href="" class="d-flex justify-content-between p-2 text-dark">
+                                <p class="mb-0 text-truncate">
+                                    <small class="border border-danger text-danger fs-3">중요</small>
+                                    공지사항제목공지사항제목공지사항제목공지사항제목공지사항제목공지사항제목공지사항제목공지사항제목공지사항제목공지사항제목공지사항제목
+                                </p>
+                                <span class="text-secondary">2022.12.12</span>
+                            </a>
+                        </li>
+                        <li class="list-unstyled border-top">
+                            <a href="" class="d-flex justify-content-between p-2 text-dark">
+                                <p class="mb-0 text-truncate">
+                                    <small class="border border-danger text-danger fs-3">중요</small>
+                                    공지사항제목
+                                </p>
+                                <span class="text-secondary">2022.12.12</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </section>
+        </div>
+    </div>
+
+    <script defer src="../js/bootstrap.js"></script>
+    <script defer src="../js/bootstrap.bundle.min.js"></script>
+    <script defer src="../js/common.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,218 @@
+/* common */
+body {
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+}
+
+html {
+    height: -webkit-fill-available;
+}
+
+.form-text {
+    color: #666;
+}
+
+.essential::before {
+    content: "*";
+    margin-right: 0.2rem;
+    color: var(--red);
+}
+
+.btn-border {
+    font-weight: bold;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+}
+
+/* 토글 */
+.dropdown-toggle {
+    outline: 0;
+}
+
+.btn-toggle {
+    position: relative;
+    width: 100%;
+    padding: .25rem .5rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #ddd;
+    background-color: transparent;
+}
+
+.btn-toggle:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.btn-toggle::after {
+    position: absolute;
+    top: 50%;
+    right: 0.8rem;
+    width: 1.25em;
+    line-height: 0;
+    content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='rgba%280,0,0,.5%29' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/%3e%3c/svg%3e");
+    transition: transform .35s ease;
+    transform-origin: .5em 50%;
+    transform: translateY(-50%) rotate(90deg);
+    filter: invert(100%);
+}
+
+.btn-toggle[aria-expanded="true"]::after {
+    transform: translateY(-50%) rotate(-90deg);
+}
+
+.btn-toggle-nav a {
+    width: 100%;
+    padding: .1875rem .5rem;
+    margin-top: .125rem;
+    padding-left: 1.25rem;
+    color: #fff;
+}
+
+.btn-toggle-nav li.active {
+    background-color: #0d6efd;
+}
+
+.btn-toggle-nav a:hover,
+.btn-toggle-nav a:focus {
+    background-color: rgba(255,255,255,.2);
+}
+
+.scrollarea {
+    overflow-y: auto;
+}
+
+/* 스위치 */
+.switch {
+    position: relative;
+    width: 40px;
+    height: 20px;
+    background: #666;
+    border-radius: 100px;
+}
+.switch input {
+    display: none;
+}
+.switch input + label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.switch input + label::before {
+    position: absolute;
+    left: 1px;
+    top: 50%;
+    content: "";
+    display: block;
+    width: 18px;
+    height: 18px;
+    transform: translateY(-50%);
+    background: #fff;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+.switch input:checked + label::before {
+    left: 50%;
+}
+
+.form-check * {
+    cursor: pointer;
+}
+
+/* 셀렉트 */
+.small_select {
+    flex-shrink: 0;
+    width: 115px;
+}
+
+/* 뱃지 */
+.badge-green {
+    background: #e2fdd0;
+    color: green;
+}
+
+.badge-purple {
+    background: #e8deff;
+    color: #8d18ab;
+}
+
+.badge-red {
+    background: #ffe6e1;
+    color: #f55e5e;
+}
+
+/* 사이드바 */
+.side-bar {
+    min-width: 250px;
+    height: 100vh;
+    background: var(--gray-dark);
+    color: #fff;
+}
+
+/* 컨텐츠 영역 */
+.content_area {
+    min-width: 1200px;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.content_box + .content_box {
+    margin-top: 30px;
+}
+
+/* 로그인 */
+.login .wrap_inner {
+    min-height: 100vh;
+    padding-top: 100px;
+}
+
+/* 입력폼 모달 */
+.form_modal .modal-header {
+    position: relative;
+}
+.form_modal .btn-close {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 12px;
+}
+
+.form-group.category .list-group-item {
+    padding: 0.3rem 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+.form-group.category .list-group-item.active {
+    background: #eee;
+    color: #222;
+}
+
+/* 테이블 */
+.table {
+    /* table-layout: fixed; */
+}
+.table-fixed {
+    table-layout: fixed;
+}
+.table th {
+    white-space: nowrap;
+}
+.table td, 
+.table tr {
+    min-width: 10rem;
+}
+
+.table .prd_img {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+}
+
+.table p,
+.table span {
+    font-weight: normal;
+}
