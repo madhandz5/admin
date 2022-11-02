@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <!-- 주소록 -->
+    <!-- 매니저관리 -->
 
     <div id="wrap">
         <div class="container-fluid row" style="flex-wrap:nowrap;">
@@ -37,9 +37,9 @@
                                 <li><a href="./basic_info.html"
                                         class="link-dark d-inline-flex text-decoration-none rounded">기본정보</a>
                                 </li>
-                                <li class="active"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">주소록</a>
+                                <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">주소록</a>
                                 </li>
-                                <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">매니저관리</a>
+                                <li class="active"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">매니저관리</a>
                                 </li>
                             </ul>
                         </div>
@@ -186,125 +186,88 @@
             </div>
             <!-- 컨텐츠 -->
             <section class="content_area p-5">
-                <div class="shadow p-3 rounded">
-                    <div class="d-flex justify-content-between align-items-start">
-                        <div>
-                            <h4 class="pt-3 pb-3">주소록</h4>
-                            <p>상품에 표시할 출고지/반품지 정보입니다</p>
-                        </div>
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addressAddModal">주소록 추가</button>
-                    </div>
+                <h3 class="">매니저 관리</h3>
+                <div class="d-flex align-items-start justify-content-between">
                     <ul>
-                        <li class="d-flex align-items-start border-top p-3">
-                            <span class="badge badge-gray mr-3">출고지</span>
-                            <div class="w-100">
-                                <div class="d-inline-flex w-100 btn-toggle" data-bs-toggle="collapse" data-bs-target="#address1-collapse" aria-expanded="true">
-                                    <p class="font-weight-bold pb-0">고구마 출고지</p>
-                                    <p class="fs-13 ml-2 pb-0">전라남도 ~</p>
-                                </div>
-                                <div class="collapse" id="address1-collapse">
-                                    <p>연락처: 00000000000</p>
-                                    <p>관리자 이름 : 프래프</p>
-                                    <button type="button" class="btn btn-primary">수정</button>
-                                    <button type="button" class="btn btn-border">삭제</button>
-                                </div>
-                            </div>
+                        <li>
+                            ○ 매니저 초대를 통해 관리 권한을 부여 할 수 있습니다.
                         </li>
-                        <li class="d-flex align-items-start border-top p-3">
-                            <span class="badge badge-gray mr-3">반품/교환지</span>
-                            <div class="w-100">
-                                <div class="d-inline-flex w-100 btn-toggle" data-bs-toggle="collapse" data-bs-target="#address2-collapse" aria-expanded="true">
-                                    <p class="font-weight-bold pb-0">고구마 출고지</p>
-                                    <p class="fs-13 ml-2 pb-0">전라남도 ~</p>
-                                </div>
-                                <div class="collapse" id="address2-collapse">
-                                    <p>연락처: 00000000000</p>
-                                    <p>관리자 이름 : 프래프</p>
-                                    <button type="button" class="btn btn-primary">수정</button>
-                                    <button type="button" class="btn btn-border">삭제</button>
-                                </div>
-                            </div>
+                        <li>
+                            ○ 매니저 초대를 통해 관리 권한을 부여 할 수 있습니다.
+                        </li>
+                        <li>
+                            ○ 매니저 초대를 통해 관리 권한을 부여 할 수 있습니다.
                         </li>
                     </ul>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#inviteModal">
+                        매니저 초대
+                    </button>
+                </div>
+
+                <div class="table-responsive overflow-auto mb-5">
+                    <table class="table">
+                        <thead class="table-light">
+                            <tr>
+                                <th scope="col">이름</th>
+                                <th scope="col">아이디</th>
+                                <th scope="col">권한</th>
+                                <th scope="col">승인상태</th>
+                                <th scope="col">삭제</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td scope="row">프래프</td>
+                                <td scope="row">프래프</td>
+                                <td scope="row">프래프</td>
+                                <td scope="row">프래프</td>
+                                <td scope="row">프래프</td>
+                            </tr>
+                            <!-- 목록 없을 때 -->
+                            <tr>
+                                <td colspan="5" class="text-center">데이터 없음</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </section>
+        </div>
 
-            <!-- ============================== 주소록 추가 모달 ============================== -->
-            <div class="modal fade form_modal" id="addressAddModal" tabindex="-1" >
-                <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
-                    <div class="modal-content">
-                        <div class="modal-header justify-content-center">
-                            <button type="button" class="btn-close border-0 bg-white" data-bs-dismiss="modal"
-                                aria-label="Close">나가기</button>
-                            <h5 class="modal-title text-center" id="exampleModalLabel">주소록 추가</h5>
-                        </div>
-                        <div class="modal-body">
-                            <form action="">
-                                <fieldset>
-                                    <legend></legend>
-                                    <!-- 라디오버튼 -->
-                                    <p class="font-weight-bold">
-                                        <small class="text-danger">(필수)</small>
-                                        종류
-                                    </p>
-                                    <ul class="form-group d-flex">
-                                        <li class="form-check">
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                                id="flexRadioDefault1">
-                                            <label class="form-check-label" for="flexRadioDefault1">
-                                                출고지
-                                            </label>
-                                        </li>
-                                        <li class="form-check ml-2">
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                                id="flexRadioDefault2" checked>
-                                            <label class="form-check-label" for="flexRadioDefault2">
-                                                반품/교환지
-                                            </label>
-                                        </li>
-                                        <li class="form-check ml-2">
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                                id="flexRadioDefault3" checked>
-                                            <label class="form-check-label" for="flexRadioDefault3">
-                                                일반
-                                            </label>
-                                        </li>
-                                    </ul>
-                                    <div class="form-group">
-                                        <label for="" class="form-label d-block font-weight-bold">
-                                            <small class="text-danger">(필수)</small>
-                                            주소지 관리이름
-                                        </label>
-                                        <input type="text" name="" id="" aria-describedby="helpBlock"
-                                            class="form-control w-100">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="" class="form-label d-block font-weight-bold">
-                                            <small class="text-danger">(필수)</small>
-                                            주소지 관리연락처
-                                        </label>
-                                        <input type="text" name="" id="" aria-describedby="helpBlock"
-                                            class="form-control w-100">
-                                    </div>
-                                    <div class="form-group">
-                                        <p class="form-label d-block font-weight-bold">
-                                            <small class="text-danger">(필수)</small>
-                                            주소지 관리연락처
-                                        </p>
-                                        <p>서울시 강남구 테헤란로</p>
-                                        <button type="submit" class="btn btn-primary">검색</button>
-                                    </div>
-                                </fieldset>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-primary w-100">추가</button>
-                        </div>
+        <!-- 초대 모달 -->
+        <div class="modal fade" id="inviteModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">
+                            매니저 초대
+                        </h5>
+                        <button type="button" class="btn-close border-0 bg-white" data-bs-dismiss="modal"
+                            aria-label="Close">✕</button>
+                    </div>
+                    <div class="modal-body">
+                        <ul>
+                            <li>
+                                ○ 초대 링크 복사 버튼을 클릭 한 후 매니저에게 공유해주세요
+                            </li>
+                            <li>
+                                ○ 해당 링크를 통해 가입한 매니저는 마스터 셀러 인증을 거쳐 주요 정보에 접근 할 수 있습니다.
+                            </li>
+                            <li>
+                                ○ 매니저 권한 부여/회수로 인해 발생되는 모든 책임은 샐러에게 있으므로 매니저 초대기능은 신중하게 사용해 주세요.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+                        <button type="button" class="btn btn-primary">
+                            초대 링크 복사
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    
 
     <script defer src="../js/bootstrap.js"></script>
     <script defer src="../js/bootstrap.bundle.min.js"></script>

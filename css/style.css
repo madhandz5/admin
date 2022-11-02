@@ -2,10 +2,12 @@
 body {
     min-height: 100vh;
     min-height: -webkit-fill-available;
+    color: #222;
 }
 
 html {
     height: -webkit-fill-available;
+    color: #222;
 }
 
 .form-text {
@@ -22,6 +24,10 @@ html {
     font-weight: bold;
     border: 1px solid var(--primary);
     color: var(--primary);
+}
+
+.border_bold {
+    border-top: 6px solid #ddd;
 }
 
 ul {
@@ -263,4 +269,17 @@ ul {
 .table p,
 .table span {
     font-weight: normal;
+}
+
+/* 고정 되는 박스 */
+.fixed_box {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100% - 250px);
 }
