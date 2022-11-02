@@ -20,12 +20,12 @@
     <div id="wrap">
         <div class="container-fluid row" style="flex-wrap:nowrap;">
             <!-- 사이드바 -->
-            <div class="side-bar d-flex flex-column flex-shrink-0 p-3 scrollarea">
+            <div class="side-bar d-flex flex-column flex-shrink-0 scrollarea">
                 <a href="/" class="d-flex align-items-center text-white text-decoration-none">
-                    <span class="fs-4" style="width:50px;"><img class="img-fluid" src="../images/logo.svg" alt=""
-                            style="filter: invert(100%);"></span>
+                    <span class="fs-4 m-3" style="width:40px;">
+                        <img class="img-fluid" src="../images/logo.svg" alt="" style="filter: invert(100%);">
+                    </span>
                 </a>
-                <hr>
                 <ul class="list-unstyled ps-0">
                     <li class="mb-1 line-top">
                         <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
@@ -34,9 +34,10 @@
                         </button>
                         <div class="collapse show" id="info-collapse">
                             <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                <li class="active"><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">기본정보</a>
+                                <li class="active"><a href="#"
+                                        class="link-dark d-inline-flex text-decoration-none rounded">기본정보</a>
                                 </li>
-                                <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">상품관리</a>
+                                <li><a href="./address.html" class="link-dark d-inline-flex text-decoration-none rounded">주소록</a>
                                 </li>
                                 <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">매니저관리</a>
                                 </li>
@@ -50,60 +51,206 @@
                         </button>
                         <div class="collapse show" id="prd-collapse">
                             <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">기본정보</a>
+                                <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">상품등록</a>
                                 </li>
-                                <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">상품관리</a>
+                                <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">상품목록</a>
                                 </li>
-                                <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">매니저관리</a>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="mb-1 line-top">
+                        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                            data-bs-toggle="collapse" data-bs-target="#coupon-collapse" aria-expanded="true">
+                            쿠폰 관리
+                        </button>
+                        <div class="collapse show" id="coupon-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">쿠폰 목록</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="mb-1 line-top">
+                        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                            data-bs-toggle="collapse" data-bs-target="#order-collapse" aria-expanded="true">
+                            주문 관리
+                        </button>
+                        <div class="collapse show" id="order-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li>
+                                    <a href="#" class="link-dark d-inline-flex text-decoration-none rounded">
+                                        주문 내역
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="link-dark d-inline-flex text-decoration-none rounded">
+                                        발주/발송 관리
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="link-dark d-inline-flex text-decoration-none rounded">
+                                        교환 관리
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="link-dark d-inline-flex text-decoration-none rounded">
+                                        반품관리
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="mb-1 line-top">
+                        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                            data-bs-toggle="collapse" data-bs-target="#inquiry-collapse" aria-expanded="true">
+                            문의 관리
+                        </button>
+                        <div class="collapse show" id="inquiry-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li>
+                                    <a href="#" class="link-dark d-inline-flex text-decoration-none rounded">
+                                        1:1 문의 관리
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="mb-1 line-top">
+                        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                            data-bs-toggle="collapse" data-bs-target="#calculate-collapse" aria-expanded="true">
+                            정산 관리
+                        </button>
+                        <div class="collapse show" id="calculate-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li>
+                                    <a href="#" class="link-dark d-inline-flex text-decoration-none rounded">
+                                        정산 내역
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="mb-1 line-top">
+                        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                            data-bs-toggle="collapse" data-bs-target="#notice-collapse" aria-expanded="true">
+                            공지사항
+                        </button>
+                        <div class="collapse show" id="notice-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li>
+                                    <a href="#" class="link-dark d-inline-flex text-decoration-none rounded">
+                                        공지사항
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="link-dark d-inline-flex text-decoration-none rounded">
+                                        가이드 모음
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="mb-1 line-top">
+                        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                            data-bs-toggle="collapse" data-bs-target="#terms-collapse" aria-expanded="true">
+                            약관 및 정책
+                        </button>
+                        <div class="collapse show" id="terms-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li>
+                                    <a href="#" class="link-dark d-inline-flex text-decoration-none rounded">
+                                        판매자 이용약관
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="link-dark d-inline-flex text-decoration-none rounded">
+                                        전자금융거래 이용약관
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="link-dark d-inline-flex text-decoration-none rounded">
+                                        개인정보처리방침
+                                    </a>
                                 </li>
                             </ul>
                         </div>
                     </li>
                 </ul>
+                <div class="user_info p-2">
+                    <div class="d-flex align-items-start">
+                        <p class="mr-2"><span>프래프</span>님</p>
+                        <a href="" class="info_btn">내정보</a>
+                    </div>
+                    <a href="" class="logout ml-auto">로그아웃</a>
+                </div>
             </div>
             <!-- 컨텐츠 -->
             <section class="content_area p-5">
                 <div class="shadow p-3 rounded">
-                    <h5 class="font-weight-bold">주문 및 배송</h5>
-                    <div class="d-flex">
-                        <dl class="col-3 d-flex p-0 mb-0">
-                            <dt>신규주문</dt>
-                            <dd class="ml-2"><a href="">1</a>건</dd>
-                        </dl>
-                        <dl class="col-3 d-flex p-0 mb-0">
-                            <dt>신규주문</dt>
-                            <dd class="ml-2"><a href="">1</a>건</dd>
-                        </dl>
-                        <dl class="col-3 d-flex p-0 mb-0">
-                            <dt>신규주문</dt>
-                            <dd class="ml-2"><a href="">1</a>건</dd>
-                        </dl>
-                    </div>
+                    <h4 class="pt-3 pb-3">정산계좌</h4>
+                    <ul>
+                        <li class="border-top pt-4 pb-4">
+                            <p class="font-weight-bold">
+                                <small class="text-danger">(필수)</small>
+                                은행명
+                            </p>
+                            기업은행
+                        </li>
+                        <li class="w-100 d-flex border-top pt-4 pb-4">
+                            <div class="w-50">
+                                <p class="font-weight-bold">
+                                    <small class="text-danger">(필수)</small>
+                                    예금주
+                                </p>
+                                <p>법인</p>
+                            </div>
+                            <div class="w-50">
+                                <p class="font-weight-bold">예금주명</p>
+                                <p>프래프</p>
+                            </div>
+                        </li>
+                        <li class="border-top pt-4 pb-4">
+                            <p class="font-weight-bold">
+                                <small class="text-danger">(필수)</small>
+                                계좌번호
+                            </p>
+                            1111111111111
+                        </li>
+                    </ul>
                 </div>
 
                 <div class="shadow p-3 rounded mt-4">
-                    <div class="d-flex justify-content-between">
-                        <h5 class="font-weight-bold">공지사항</h5>
-                        <a href="" class="text-dark">더보기 ></a>
-                    </div>
-                    <ul class="p-0">
-                        <li class="list-unstyled border-top">
-                            <a href="" class="d-flex justify-content-between p-2 text-dark">
-                                <p class="mb-0 text-truncate">
-                                    <small class="border border-danger text-danger fs-3">중요</small>
-                                    공지사항제목공지사항제목공지사항제목공지사항제목공지사항제목공지사항제목공지사항제목공지사항제목공지사항제목공지사항제목공지사항제목
-                                </p>
-                                <span class="text-secondary">2022.12.12</span>
-                            </a>
+                    <h4 class="pt-3 pb-3">서류첨부</h4>
+                    <ul>
+                        <li class="border-top pt-4 pb-4">
+                            <p class="font-weight-bold">
+                                <small class="text-danger">(필수)</small>
+                                사업자등록증 사본
+                            </p>
+                            <div class="d-flex">
+                                <input type="text" name="" id="" class="form-control w-50" readonly>
+                                <a href="" download="" class="btn btn-primary ml-2">다운로드</a>
+                            </div>
                         </li>
-                        <li class="list-unstyled border-top">
-                            <a href="" class="d-flex justify-content-between p-2 text-dark">
-                                <p class="mb-0 text-truncate">
-                                    <small class="border border-danger text-danger fs-3">중요</small>
-                                    공지사항제목
-                                </p>
-                                <span class="text-secondary">2022.12.12</span>
-                            </a>
+                        <li class="border-top pt-4 pb-4">
+                            <p class="font-weight-bold">
+                                <small class="text-danger">(필수)</small>
+                                대표자 또는 사업자 명의 통장 사본
+                            </p>
+                            <div class="d-flex">
+                                <input type="text" name="" id="" class="form-control w-50">
+                                <a href="" download="" class="btn btn-primary ml-2">다운로드</a>
+                            </div>
+                        </li>
+                        <li class="border-top pt-4 pb-4">
+                            <p class="font-weight-bold">
+                                <small class="text-danger">(필수)</small>
+                                통신판매신고증 사본
+                            </p>
+                            <div class="d-flex">
+                                <input type="text" name="" id="" class="form-control w-50">
+                                <a href="" download="" class="btn btn-primary ml-2">다운로드</a>
+                            </div>
                         </li>
                     </ul>
                 </div>
