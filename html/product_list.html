@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document admin</title>
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <script defer src="../js/jquery-3.6.0.js"></script>
+
+</head>
+
+<body>
+    <!-- 상품목록 -->
+
+    <div id="wrap">
+        <div class="container-fluid row" style="flex-wrap:nowrap;">
+            <!-- 사이드바 -->
+            <div class="side-bar d-flex flex-column flex-shrink-0 scrollarea">
+                <a href="./index.html" class="d-flex align-items-center text-white text-decoration-none">
+                    <span class="fs-4 m-3" style="width:40px;">
+                        <img class="img-fluid" src="../images/logo.svg" alt="" style="filter: invert(100%);">
+                    </span>
+                </a>
+                <ul class="list-unstyled ps-0">
+                    <li class="mb-1 line-top">
+                        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                            data-bs-toggle="collapse" data-bs-target="#info-collapse" aria-expanded="true">
+                            판매자 정보
+                        </button>
+                        <div class="collapse show" id="info-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li><a href="./basic_info.html"
+                                        class="link-dark d-inline-flex text-decoration-none rounded">기본정보</a>
+                                </li>
+                                <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">주소록</a>
+                                </li>
+                                <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">매니저관리</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="mb-1 line-top">
+                        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                            data-bs-toggle="collapse" data-bs-target="#prd-collapse" aria-expanded="true">
+                            상품 관리
+                        </button>
+                        <div class="collapse show" id="prd-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">상품등록</a>
+                                </li>
+                                <li class="active"><a href="#"
+                                        class="link-dark d-inline-flex text-decoration-none rounded">상품목록</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="mb-1 line-top">
+                        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                            data-bs-toggle="collapse" data-bs-target="#coupon-collapse" aria-expanded="true">
+                            쿠폰 관리
+                        </button>
+                        <div class="collapse show" id="coupon-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">쿠폰 목록</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="mb-1 line-top">
+                        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                            data-bs-toggle="collapse" data-bs-target="#order-collapse" aria-expanded="true">
+                            주문 관리
+                        </button>
+                        <div class="collapse show" id="order-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li>
+                                    <a href="#" class="link-dark d-inline-flex text-decoration-none rounded">
+                                        주문 내역
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="link-dark d-inline-flex text-decoration-none rounded">
+                                        발주/발송 관리
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="link-dark d-inline-flex text-decoration-none rounded">
+                                        교환 관리
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="link-dark d-inline-flex text-decoration-none rounded">
+                                        반품관리
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="mb-1 line-top">
+                        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                            data-bs-toggle="collapse" data-bs-target="#inquiry-collapse" aria-expanded="true">
+                            문의 관리
+                        </button>
+                        <div class="collapse show" id="inquiry-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li>
+                                    <a href="#" class="link-dark d-inline-flex text-decoration-none rounded">
+                                        1:1 문의 관리
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="mb-1 line-top">
+                        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                            data-bs-toggle="collapse" data-bs-target="#calculate-collapse" aria-expanded="true">
+                            정산 관리
+                        </button>
+                        <div class="collapse show" id="calculate-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li>
+                                    <a href="#" class="link-dark d-inline-flex text-decoration-none rounded">
+                                        정산 내역
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="mb-1 line-top">
+                        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                            data-bs-toggle="collapse" data-bs-target="#notice-collapse" aria-expanded="true">
+                            공지사항
+                        </button>
+                        <div class="collapse show" id="notice-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li>
+                                    <a href="#" class="link-dark d-inline-flex text-decoration-none rounded">
+                                        공지사항
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="link-dark d-inline-flex text-decoration-none rounded">
+                                        가이드 모음
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="mb-1 line-top">
+                        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                            data-bs-toggle="collapse" data-bs-target="#terms-collapse" aria-expanded="true">
+                            약관 및 정책
+                        </button>
+                        <div class="collapse show" id="terms-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li>
+                                    <a href="#" class="link-dark d-inline-flex text-decoration-none rounded">
+                                        판매자 이용약관
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="link-dark d-inline-flex text-decoration-none rounded">
+                                        전자금융거래 이용약관
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="link-dark d-inline-flex text-decoration-none rounded">
+                                        개인정보처리방침
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <div class="user_info p-2">
+                    <div class="d-flex align-items-start">
+                        <p class="mr-2"><span>프래프</span>님</p>
+                        <a href="" class="info_btn">내정보</a>
+                    </div>
+                    <a href="" class="logout ml-auto">로그아웃</a>
+                </div>
+            </div>
+            <!-- 컨텐츠 -->
+            <section class="content_area p-5 pb-7">
+                <div class="d-flex align-items-start">
+                    <h3 class="">상품목록</h3>
+                    <a href="" download="" class="btn btn-primary ml-3">가이드 다운로드</a>
+                </div>
+
+                <div class="shadow p-3 rounded mt-4">
+                    <div class="d-flex">
+                        <div class="d-flex">
+                            <select id="" class="form-select form-control small_select">
+                                <option>option</option>
+                                <option>option</option>
+                                <option>option</option>
+                            </select>
+                            <input type="text" class="form-control ml-2" placeholder="검색어 입력" style="width: 300px;">
+                        </div>
+                        <div class="d-flex ml-4">
+                            <button type="button" class="btn btn-primary">조회</button>
+                            <button type="button" class="btn btn-border ml-2">초기화</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="shadow p-3 rounded mt-4">
+                    <form action="">
+                        <fieldset>
+                            <legend></legend>
+                            <div class="table-responsive overflow-auto mb-5">
+                                <table class="table" style="font-size: 14px;">
+                                    <colgroup>
+                                        <col>
+                                    </colgroup>
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th scope="col">상품ID</th>
+                                            <th scope="col" class="text-center" style="width: 70px">상태</th>
+                                            <th scope="col" class="text-center" style="width: 300px">삼품 / 옵션 <br> (옵션개수)
+                                            </th>
+                                            <th scope="col" class="text-center">대표옵션 가격 <br> (판캐가, 특가)</th>
+                                            <th scope="col" class="text-center">판매기간 / 특가기간</th>
+                                            <th scope="col" class="text-center">재고/ 판매상태 관리</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="border-bottom">
+                                            <td scope="row">
+                                                111
+                                                <button type="button" class="btn btn-primary ml-3 ">재고관리</button>
+                                            </td>
+                                            <td scope="row">
+                                                <span class="badge badge-green">판매승인</span>
+                                                <span class="badge badge-green">판매승인</span>
+                                                <span class="badge badge-green">판매승인</span>
+                                            </td>
+                                            <td scope="row" class="d-flex">
+                                                <div class="prd_img bg-dark mr-3">
+                                                    <img src="" class="img-fluid" alt="">
+                                                </div>
+                                                <div>
+                                                    <p class="mb-0">상품명 상품명상품명 상품명상품명 상품명</p>
+                                                    <span>옵션 옵션 외 4건</span>
+                                                </div>
+                                            </td>
+                                            <td scope="row">
+                                                <p class="mb-0">정상가: <b>50,000</b></p>
+                                                <p class="mb-0">정상가: <b>50,000</b></p>
+                                                <p class="mb-0">정상가: <b>50,000</b></p>
+                                            </td>
+                                            <td scope="row">
+                                                <p>
+                                                    <span class="badge badge-purple">판매기간</span>
+                                                    2022-12-12 00:00 ~ 2022-12-12 00:00
+                                                </p>
+                                                <p>
+                                                    <span class="badge badge-red">특가기간</span>
+                                                    2022-12-12 00:00 ~ 2022-12-12 00:00
+                                                </p>
+                                            </td>
+                                            <td scope="row">
+                                                <select id="" class="form-select form-control small_select">
+                                                    <option>판매중</option>
+                                                    <option>option</option>
+                                                    <option>option</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+                </fieldset>
+                </form>
+        </div>
+        <div class="fixed_box">
+            <p class="mb-0">임시저장 되었습니다</p>
+            <button type="button" class="btn btn-border">저장하기</button>
+        </div>
+        </section>
+    </div>
+
+    </div>
+
+
+    <script defer src="../js/bootstrap.js"></script>
+    <script defer src="../js/bootstrap.bundle.min.js"></script>
+    <script defer src="../js/common.js"></script>
+</body>
+
+</html>
