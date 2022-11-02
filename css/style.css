@@ -204,6 +204,15 @@ ul {
     background: #eee;
 }
 
+.btn-question {
+    width: 18px;
+    height: 18px;
+    padding: 0;
+    line-height: 1;
+    border: 1px solid #888;
+    border-radius: 50%;
+}
+
 /* 페이지네이션 */
 .pagination {
     justify-content: center;
