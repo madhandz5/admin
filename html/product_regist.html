@@ -15,10 +15,10 @@
 </head>
 
 <body>
-    <!-- 공통 스타일 -->
+    <!-- 상품등록 -->
 
     <div id="wrap">
-        <div class="container-fluid d-flex p-0 m-0" style="flex-wrap:nowrap;">
+        <div class="container-fluid row" style="flex-wrap:nowrap;">
             <!-- 사이드바 -->
             <div class="side-bar d-flex flex-column flex-shrink-0 scrollarea">
                 <a href="./index.html" class="d-flex align-items-center text-white text-decoration-none">
@@ -34,11 +34,10 @@
                         </button>
                         <div class="collapse show" id="info-collapse">
                             <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                <li class="active"><a href="./basic_info.html"
+                                <li><a href="./basic_info.html"
                                         class="link-dark d-inline-flex text-decoration-none rounded">기본정보</a>
                                 </li>
-                                <li><a href="./address.html"
-                                        class="link-dark d-inline-flex text-decoration-none rounded">주소록</a>
+                                <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">주소록</a>
                                 </li>
                                 <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">매니저관리</a>
                                 </li>
@@ -52,7 +51,8 @@
                         </button>
                         <div class="collapse show" id="prd-collapse">
                             <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">상품등록</a>
+                                <li class="active"><a href="#"
+                                        class="link-dark d-inline-flex text-decoration-none rounded">상품등록</a>
                                 </li>
                                 <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">상품목록</a>
                                 </li>
@@ -185,193 +185,52 @@
                     <a href="" class="logout ml-auto">로그아웃</a>
                 </div>
             </div>
-
-            <!-- ============================== 컨텐츠 ============================== -->
-            <section class="content_area p-5 w-100">
-                <div class="shadow p-3 rounded">
-                    <h5 class="font-weight-bold">주문 및 배송</h5>
-                    <div class="d-flex">
-                        <dl class="col-3 d-flex p-0 mb-0">
-                            <dt>신규주문</dt>
-                            <dd class="ml-2"><a href="">1</a>건</dd>
-                        </dl>
-                        <dl class="col-3 d-flex p-0 mb-0">
-                            <dt>신규주문</dt>
-                            <dd class="ml-2"><a href="">1</a>건</dd>
-                        </dl>
-                        <dl class="col-3 d-flex p-0 mb-0">
-                            <dt>신규주문</dt>
-                            <dd class="ml-2"><a href="">1</a>건</dd>
-                        </dl>
-                    </div>
+            <!-- 컨텐츠 -->
+            <section class="content_area p-5 pb-7">
+                <div class="d-flex align-items-start">
+                    <h3 class="">상품등록</h3>
+                    <a href="" download="" class="btn btn-primary ml-3">가이드 다운로드</a>
                 </div>
 
-                <div class="shadow p-3 rounded mt-4">
-                    <div class="d-flex justify-content-between">
-                        <h5 class="font-weight-bold">공지사항</h5>
-                        <a href="" class="text-dark">더보기 ></a>
-                    </div>
-                    <ul class="p-0">
-                        <li class="list-unstyled border-top">
-                            <a href="" class="d-flex justify-content-between p-2 text-dark">
-                                <p class="mb-0 text-truncate">
-                                    <!-- <small class="border border-danger text-danger fs-3">중요</small> -->
-                                    <small class="badge border border-danger text-danger">중요</small>
-                                    공지사항제목공지사항제목공지사항제목공지사항제목공지사항제목공지사항제목공지사항제목공지사항제목공지사항제목공지사항제목공지사항제목사항제목
-                                </p>
-                                <span class="text-secondary ml-2">2022.12.12</span>
-                            </a>
-                        </li>
-                        <li class="list-unstyled border-top">
-                            <a href="" class="d-flex justify-content-between p-2 text-dark">
-                                <p class="mb-0 text-truncate">
-                                    <small class="badge border border-danger text-danger">중요</small>
-                                    공지사항제목
-                                </p>
-                                <span class="text-secondary ml-2">2022.12.12</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- ============================== 모달 버튼 ============================== -->
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    입력 모달
-                </button>
-
-                <!-- ============================== 입력 모달 ============================== -->
-                <div class="modal fade form_modal" id="exampleModal" tabindex="-1" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-header justify-content-center">
-                                <button type="button" class="btn-close border-0 bg-white" data-bs-dismiss="modal"
-                                    aria-label="Close">나가기</button>
-                                <h5 class="modal-title text-center" id="exampleModalLabel">Modal title</h5>
-                            </div>
-                            <div class="modal-body">
-                                <form action="">
-                                    <fieldset>
-                                        <legend></legend>
-                                        <!-- 라디오버튼 -->
-                                        <p class="font-weight-bold">
-                                            <small class="text-danger">(필수)</small>
-                                            종류
-                                        </p>
-                                        <div class="form-group d-flex">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                                    id="flexRadioDefault1">
-                                                <label class="form-check-label" for="flexRadioDefault1">
-                                                    Default radio
-                                                </label>
-                                            </div>
-                                            <div class="form-check ml-2">
-                                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                                    id="flexRadioDefault2" checked>
-                                                <label class="form-check-label" for="flexRadioDefault2">
-                                                    Default checked radio
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="" class="form-label d-block font-weight-bold">
-                                                <small class="text-danger">(필수)</small>
-                                                상품종류
-                                            </label>
-                                            <select id="" class="form-select w-100 form-control">
-                                                <option>option</option>
-                                                <option>option</option>
-                                                <option>option</option>
-                                                <option>option</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="" class="form-label d-block font-weight-bold">
-                                                <small class="text-danger">(필수)</small>
-                                                상품명
-                                            </label>
-                                            <input type="text" name="" id="" aria-describedby="helpBlock"
-                                                class="form-control w-100" placeholder="최대 100자까지 입력 가능">
-                                            <p id="helpBlock" class="form-text">* 설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명</p>
-                                        </div>
-
-                                        <button type="submit" class="btn btn-primary">검색</button>
-                                    </fieldset>
-                                </form>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-primary w-100">추가</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- ============================== 모달 버튼 ============================== -->
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2">
-                    알림 모달
-                </button>
-                <!-- ============================== 알림 모달 ============================== -->
-                <div class="modal fade" id="exampleModal2" tabindex="-1" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                                <button type="button" class="btn-close border-0 bg-white" data-bs-dismiss="modal"
-                                    aria-label="Close">✕</button>
-                            </div>
-                            <div class="modal-body">
-                                ...
-                            </div>
-                            <div class="modal-footer">
-                                <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
-                                <button type="button" class="btn btn-primary">Save changes</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="shadow p-3 rounded mt-4">
-                    <!-- ============================== 버튼 종류 ============================== -->
-                    <button type="button" class="btn btn-primary">버튼</button>
-                    <button type="button" class="btn btn-border">버튼</button>
-                    <button type="button" class="btn btn-border">+</button>
-                    <button type="button" class="btn border-danger text-danger">✕</button>
-                    <!-- 스위치 -->
-                    <div class="switch">
-                        <input type="checkbox" name="" id="switch">
-                        <label for="switch"></label>
-                    </div>
-                </div>
-
-                <!-- ============================== 입력폼 ============================== -->
                 <div class="shadow p-3 rounded mt-4">
                     <form action="">
                         <fieldset>
                             <legend></legend>
                             <h4 class="essential">상품</h4>
-                            <div class="form-group">
+                            <div class="form-group border-top pt-3 pb-3">
                                 <label for="" class="form-label d-block font-weight-bold">
                                     <small class="text-danger">(필수)</small>
                                     상품종류
                                 </label>
                                 <select id="" class="form-select w-100 form-control">
-                                    <option>option</option>
+                                    <option>일반상품</option>
                                 </select>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group border-top pt-3 pb-3">
                                 <label for="" class="form-label d-block font-weight-bold">
                                     <small class="text-danger">(필수)</small>
                                     상품명
                                 </label>
                                 <input type="text" name="" id="" aria-describedby="helpBlock" class="form-control w-50"
                                     placeholder="최대 100자까지 입력 가능">
-                                <p id="helpBlock" class="form-text">* 설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명</p>
+                                <p id="helpBlock" class="form-text">
+                                    * 판매 상품과 직접 관련이 없는 다른 상품명, 스팸성 키워드 입력시 관리자에 의해 판매 금지 될 수 잇습니다.
+                                </p>
                             </div>
-                            <div class="form-group category">
+                            <div class="form-group border-top pt-3 pb-3">
+                                <label for="" class="form-label d-block font-weight-bold">
+                                    한줄 설명
+                                </label>
+                                <input type="text" name="" id="" aria-describedby="helpBlock" class="form-control w-50"
+                                    placeholder="최대 100자까지 입력 가능">
+                                <p id="helpBlock" class="form-text">
+                                    * 주후 사용자에게 노출괴는 한줄 설명입니다.
+                                </p>
+                            </div>
+                            <div class="form-group category border-top pt-3 pb-3">
                                 <p class="font-weight-bold">
                                     <small class="text-danger">(필수)</small>
-                                    상품종류
+                                    상품 카테고리
                                 </p>
                                 <div class="d-flex">
                                     <div class="scrollarea border rounded flex-grow-1" style="height: 150px;">
@@ -430,53 +289,31 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <p class="form-text">* 설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명</p>
+                                <p class="form-text">* 상품과 맞지 않는 카테고리 등록할 경우 강제 이동되거나 판매중지, 판매금지 될 수 있습니다. </p>
                             </div>
 
-                            <!-- ============================== 체크박스 ============================== -->
-                            <p class="font-weight-bold">
-                                <small class="text-danger">(필수)</small>
-                                종류
-                            </p>
-                            <div class="form-group d-flex">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                        Default checkbox
-                                    </label>
-                                </div>
-                                <div class="form-check ml-2">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
-                                        checked>
-                                    <label class="form-check-label" for="flexCheckChecked">
-                                        Checked checkbox
-                                    </label>
-                                </div>
+                            <h4 class="essential border_bold pt-5">이미지</h4>
+                            <div class="form-group border-top pt-3 pb-3">
+                                <label for="" class="form-label d-block font-weight-bold">
+                                    상품목록 썸네일 이미지(750 x 750)
+                                </label>
+                                <input type="file" name="" id="" class="form-control w-50">
                             </div>
 
-                            <!--  ============================== 라디오버튼 ============================== -->
-                            <p class="font-weight-bold">
-                                <small class="text-danger">(필수)</small>
-                                종류
-                            </p>
-                            <div class="form-group d-flex">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault1"
-                                        id="flexRadioDefault3">
-                                    <label class="form-check-label" for="flexRadioDefault3">
-                                        Default radio
-                                    </label>
-                                </div>
-                                <div class="form-check ml-2">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault1"
-                                        id="flexRadioDefault4" checked>
-                                    <label class="form-check-label" for="flexRadioDefault4">
-                                        Default checked radio
-                                    </label>
+                            <div class="form-group border-top pt-3 pb-3">
+                                <label for="" class="form-label d-block font-weight-bold">
+                                    특가 사용여부
+                                </label>
+                                <div class="d-flex">
+                                    특가 사용여부
+                                    <div class="switch ml-2">
+                                        <input type="checkbox" name="" id="switch">
+                                        <label for="switch"></label>
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="d-flex">
+                            <div class="d-flex border-top pt-3 pb-3">
                                 <div class="form-group flex-grow-1">
                                     <label for="" class="form-label d-block font-weight-bold">
                                         특가 시작일자
@@ -502,10 +339,11 @@
                             </div>
 
                             <!-- 테이블 -->
+                            <h4 class="essential border_bold pt-5">상품 옵션/재고</h4>
                             <div class="table-responsive overflow-auto mb-5">
-                                <table class="table table-striped">
+                                <table class="table table-striped min-table">
                                     <thead class="table-light">
-                                        <tr>
+                                        <tr class="border-top">
                                             <th scope="col">대표옵션</th>
                                             <th scope="col" class="essential" style="min-width: 300px;">옵션명</th>
                                             <th scope="col" class="essential" style="min-width: 300px;">옵션</th>
@@ -562,122 +400,143 @@
                                     </tbody>
                                 </table>
                             </div>
-                        </fieldset>
-                    </form>
-                </div>
+                            <button type="button" class="btn btn-border">+옵션추가</button>
+                            <ul>
+                                <li>
+                                    * 정상가:
+                                </li>
+                                <li>
+                                    * 판매가:
+                                </li>
+                                <li>
+                                    * 특가:
+                                </li>
+                                <li>
+                                    * 관리코드:
+                                </li>
+                                <li>
+                                    * 표시순서:
+                                </li>
+                                <li>
+                                    * 혜택문구:
+                                </li>
+                            </ul>
 
-                <div class="shadow p-3 rounded mt-4">
-                    <form action="">
-                        <fieldset>
-                            <legend></legend>
-                            <h4 class="essential">상품 목록</h4>
-
-                            <div class="form-group d-flex">
-                                <div class="d-flex">
-                                    <select id="" class="form-select form-control small_select">
-                                        <option>option</option>
-                                        <option>option</option>
-                                        <option>option</option>
+                            <div class="d-flex border_bold pt-5 pb-3">
+                                <div class="form-group flex-grow-1">
+                                    <label for="" class="form-label d-block font-weight-bold">
+                                        <small class="text-danger">(필수)</small>
+                                        과세
+                                    </label>
+                                    <select id="" class="form-select w-100 form-control">
+                                        <option>과세상품</option>
                                     </select>
-                                    <input type="text" class="form-control ml-2" placeholder="검색어 입력"
-                                        style="width: 300px;">
                                 </div>
-                                <div class="d-flex ml-4">
-                                    <button type="button" class="btn btn-primary">조회</button>
-                                    <button type="button" class="btn btn-border ml-2">초기화</button>
+                                <div class="form-group flex-grow-1 ml-3">
+                                    <label for="" class="form-label d-block font-weight-bold">
+                                        1회 최대 구매수량
+                                    </label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" aria-label="">
+                                        <span class="input-group-text">개</span>
+                                    </div>
+                                </div>
+                                <div class="form-group flex-grow-1 ml-3">
+                                    <label for="" class="form-label d-block font-weight-bold">
+                                        1인당 최대 구매 수량
+                                    </label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" aria-label="">
+                                        <span class="input-group-text">개</span>
+                                    </div>
+                                </div>
+                                <div class="form-group flex-grow-1 ml-3">
+                                    <label for="" class="form-label d-block font-weight-bold">
+                                        관리코드
+                                    </label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" aria-label="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex border-top pt-3 pb-3">
+                                <div class="form-group flex-grow-1 w-50">
+                                    <label for="" class="form-label d-block font-weight-bold">
+                                        <small class="text-danger">(필수)</small>
+                                        보관방법
+                                    </label>
+                                    <select id="" class="form-select w-100 form-control">
+                                        <option>상온</option>
+                                    </select>
+                                </div>
+                                <div class="form-group flex-grow-1 ml-3">
+                                    <label for="" class="form-label d-block font-weight-bold">
+                                        검색태그
+                                    </label>
+                                    <div class="input-group">
+                                        <div class="d-flex">
+                                            <div>
+                                                <input type="text" class="form-control" aria-label="" placeholder="직접입력" style="width:400px">
+                                            </div>
+                                            <div>
+                                                <button type="button" class="btn btn-border ml-2">+</button>
+                                                <button type="button" class="btn border-danger text-danger">✕</button>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <p id="helpBlock" class="form-text mb-0">* 태그는 최대 20개까지 등록 할 수 있으며, 상품과 관계없는 태그는 관리자가
+                                                삭제할 수 있습니다.</p>
+                                            <p id="helpBlock" class="form-text">* 설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="table-responsive overflow-auto mb-5">
-                                <table class="table" style="font-size: 14px;">
-                                    <colgroup>
-                                        <col>
-                                    </colgroup>
-                                    <thead class="table-light">
-                                        <tr>
-                                            <th scope="col">상품ID</th>
-                                            <th scope="col" class="text-center" style="width: 80px">상태</th>
-                                            <th scope="col" class="text-center" style="width: 330px">삼품 / 옵션 <br> (옵션개수)
-                                            </th>
-                                            <th scope="col" class="text-center">대표옵션 가격 <br> (판캐가, 특가)</th>
-                                            <th scope="col" class="text-center">판매기간 / 특가기간</th>
-                                            <th scope="col" class="text-center">재고/ 판매상태 관리</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr class="border-bottom">
-                                            <td scope="row">
-                                                111
-                                                <button type="button" class="btn btn-primary ml-3 ">재고관리</button>
-                                            </td>
-                                            <td scope="row">
-                                                <span class="badge badge-green">판매승인</span>
-                                                <span class="badge badge-green">판매승인</span>
-                                                <span class="badge badge-green">판매승인</span>
-                                            </td>
-                                            <td scope="row" class="d-flex">
-                                                <div class="prd_img bg-dark mr-3">
-                                                    <img src="" class="img-fluid" alt="">
-                                                </div>
-                                                <div>
-                                                    <p class="mb-0">상품명 상품명상품명 상품명상품명 상품명</p>
-                                                    <span>옵션 옵션 외 4건</span>
-                                                </div>
-                                            </td>
-                                            <td scope="row">
-                                                <p class="mb-0">정상가: <b>50,000</b></p>
-                                                <p class="mb-0">정상가: <b>50,000</b></p>
-                                                <p class="mb-0">정상가: <b>50,000</b></p>
-                                            </td>
-                                            <td scope="row">
-                                                <p>
-                                                    <span class="badge badge-purple">판매기간</span>
-                                                    2022-12-12 00:00 ~ 2022-12-12 00:00
-                                                </p>
-                                                <p>
-                                                    <span class="badge badge-red">특가기간</span>
-                                                    2022-12-12 00:00 ~ 2022-12-12 00:00
-                                                </p>
-                                            </td>
-                                            <td scope="row">
-                                                <select id="" class="form-select form-control small_select">
-                                                    <option>판매중</option>
-                                                    <option>option</option>
-                                                    <option>option</option>
-                                                </select>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                            <h4 class="essential border_bold pt-5">상품정보제공고시</h4>
+                            <div class="form-group flex-grow-1">
+                                <label for="" class="form-label d-block font-weight-bold">
+                                    <small class="text-danger">(필수)</small>
+                                    상품정보제공고시 상품군
+                                </label>
+                                <div class="d-flex">
+                                    <select id="" class="form-select w-50 form-control">
+                                        <option>식품(농수축산물)</option>
+                                    </select>
+                                    <p class="ml-3 text-primary">빈값을 모두 '상품 상세참조'로 설정</p>
+                                </div>
+                            </div>
+
+                            <div class="form-group flex-grow-1 border-top pt-3 pb-3">
+                                <label for="" class="form-label d-block font-weight-bold">
+                                    <small class="text-danger">(필수)</small>
+                                    4.원산지
+                                </label>
+                                <input type="text" class="form-control w-100">
+                            </div>
+                            <div class="form-group flex-grow-1 border-top pt-3 pb-3">
+                                <label for="" class="form-label d-block font-weight-bold">
+                                    <small class="text-danger">(필수)</small>
+                                    5. 제조연월일(포장일 또는 생산연도)
+                                </label>
+                                <input type="text" class="form-control w-100 mb-2">
+                                <input type="text" class="form-control w-100" value="구체적 내용 기재(예: 주문일로부터 00일 이내)" readonly>
                             </div>
                         </fieldset>
                     </form>
                 </div>
-
-                <!-- 페이지네이션 -->
-                <nav aria-label="Page navigation example">
-                    <ul class="pagination">
-                        <li class="page-item">
-                            <a class="page-link active" href="#" aria-label="Previous">
-                                <span aria-hidden="true">&laquo;</span>
-                            </a>
-                        </li>
-                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item">
-                            <a class="page-link" href="#" aria-label="Next">
-                                <span aria-hidden="true">&raquo;</span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
+                <div class="fixed_box">
+                    <p class="mb-0">임시저장 되었습니다</p>
+                    <button type="button" class="btn btn-border">저장하기</button>
+                </div>
             </section>
         </div>
 
-        <script defer src="../js/bootstrap.js"></script>
-        <script defer src="../js/bootstrap.bundle.min.js"></script>
-        <script defer src="../js/common.js"></script>
+    </div>
+
+
+    <script defer src="../js/bootstrap.js"></script>
+    <script defer src="../js/bootstrap.bundle.min.js"></script>
+    <script defer src="../js/common.js"></script>
 </body>
 
 </html>

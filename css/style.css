@@ -204,6 +204,35 @@ ul {
     background: #eee;
 }
 
+/* 페이지네이션 */
+.pagination {
+    justify-content: center;
+    margin-top: 50px;
+}
+.page-link {
+    width: 24px;
+    height: 24px;
+    margin: 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 0;
+    line-height: 1;
+    border: none;
+    color: #222;
+}
+
+.page-link.active {
+    background: #b5d2ff;
+    font-weight: bold;
+}
+
+.page-item:first-child .page-link,
+.page-item:last-child .page-link{
+    border-radius: 50%;
+}
+
 
 /* 컨텐츠 영역 */
 .content_area {
@@ -252,13 +281,22 @@ ul {
 .table-fixed {
     table-layout: fixed;
 }
+.table thead {
+    border-top: 2px solid #000;
+}
 .table th {
     white-space: nowrap;
 }
-.table td, 
-.table tr {
+.min-table.table td, 
+.min-table.table tr {
     min-width: 10rem;
 }
+
+.table thead th,
+.table tbody td {
+    vertical-align: middle;
+}
+
 
 .table .prd_img {
     flex-shrink: 0;
@@ -281,5 +319,7 @@ ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: calc(100% - 250px);
+    /* width: calc(100% - 250px + 1280px); */
+    width: 500px;
+    padding: 0.7rem 3rem;
 }
