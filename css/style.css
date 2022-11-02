@@ -24,23 +24,48 @@ html {
     color: var(--primary);
 }
 
-/* 토글 */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.fs-13 {
+    font-size: 13px;
+}
+
+/* 사이드바 */
+.side-bar {
+    width: 250px;
+    height: 100vh;
+    background: var(--gray-dark);
+    color: #fff;
+}
+
+.side-bar>ul>li {
+    padding: 0.5rem 0;
+    border-top: 1px solid #656565;
+}
+
 .dropdown-toggle {
     outline: 0;
 }
 
-.btn-toggle {
+.side-bar .btn-toggle {
     position: relative;
     width: 100%;
     padding: .25rem .5rem;
     font-size: 0.8rem;
     font-weight: 600;
-    color: #ddd;
+    color: #818181;
     background-color: transparent;
 }
 
-.btn-toggle:hover {
+.side-bar .btn-toggle:hover {
     background: rgba(255, 255, 255, 0.3);
+}
+
+.btn-toggle {
+    position: relative;
 }
 
 .btn-toggle::after {
@@ -53,14 +78,18 @@ html {
     transition: transform .35s ease;
     transform-origin: .5em 50%;
     transform: translateY(-50%) rotate(90deg);
-    filter: invert(100%);
 }
+
 
 .btn-toggle[aria-expanded="true"]::after {
     transform: translateY(-50%) rotate(-90deg);
 }
 
-.btn-toggle-nav a {
+.side-bar .btn-toggle::after{
+    filter: invert(100%);
+}
+
+.side-bar .btn-toggle-nav a {
     width: 100%;
     padding: .1875rem .5rem;
     margin-top: .125rem;
@@ -68,13 +97,35 @@ html {
     color: #fff;
 }
 
-.btn-toggle-nav li.active {
+.side-bar .btn-toggle-nav li.active {
     background-color: #0d6efd;
 }
 
-.btn-toggle-nav a:hover,
-.btn-toggle-nav a:focus {
+.side-bar .btn-toggle-nav a:hover,
+.side-bar .btn-toggle-nav a:focus {
     background-color: rgba(255,255,255,.2);
+}
+
+.user_info {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #818181;
+}
+
+.user_info * {
+    margin: 0;
+}
+
+.user_info a {
+    color: #818181;
+}
+.user_info .info_btn {
+    flex-shrink: 0;
+    border: 1px solid #818181;
+    border-radius: 20px;
 }
 
 .scrollarea {
@@ -143,17 +194,14 @@ html {
     color: #f55e5e;
 }
 
-/* 사이드바 */
-.side-bar {
-    min-width: 250px;
-    height: 100vh;
-    background: var(--gray-dark);
-    color: #fff;
+.badge-gray {
+    background: #eee;
 }
+
 
 /* 컨텐츠 영역 */
 .content_area {
-    min-width: 1200px;
+    min-width: 1280px;
     height: 100vh;
     overflow-y: auto;
 }
