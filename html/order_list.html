@@ -18,7 +18,7 @@
     <!-- 주문내역 -->
 
     <div id="wrap">
-        <div class="container-fluid row" style="flex-wrap:nowrap;">
+        <div class="d-flex" style="flex-wrap:nowrap;">
             <!-- 사이드바 -->
             <div class="side-bar d-flex flex-column flex-shrink-0 scrollarea">
                 <a href="./index.html" class="d-flex align-items-center text-white text-decoration-none">
@@ -185,7 +185,7 @@
                 </div>
             </div>
             <!-- 컨텐츠 -->
-            <section class="content_area p-5 pb-7">
+            <section class="content_area p-5 pb-7 w-100">
                 <div class="d-flex align-items-start">
                     <h3 class="">주문 내역</h3>
                     <a href="" download="" class="btn btn-primary ml-3">가이드 다운로드</a>
@@ -257,57 +257,228 @@
                 </div>
 
                 <div class="shadow p-3 rounded mt-4">
-                    <a href="" download="" class="btn btn-border">전체 주문내역 다운로드</a>
-                    <div class="table-responsive overflow-auto mb-5">
-                        <table class="table text-center" style="font-size: 14px;">
-                            <thead class="table-light">
-                                <tr>
-                                    <th scope="col" class="text-center">고객번호</th>
-                                    <th scope="col" class="text-center">주문번호</th>
-                                    <th scope="col" class="text-center">상품주문번호</th>
-                                    <th scope="col" class="text-center">주문일시</th>
-                                    <th scope="col" class="text-center">발송시작일</th>
-                                    <th scope="col" class="text-center">주문상태</th>
-                                    <th scope="col" class="text-center">주문상태</th>
-                                    <th scope="col" class="text-center">주문상태</th>
-                                    <th scope="col" class="text-center">주문상태</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="border-bottom">
-                                    <td scope="row">
-                                        11111111
-                                    </td>
-                                    <td scope="row">
-                                        <a href="" class="" style="text">1111111111111</a>
-                                    </td>
-                                    <td scope="row">
-                                        123456-7891011
-                                    </td>
-                                    <td scope="row">
-                                        2012.12.12 (수) 오후 00:00:00
-                                    </td>
-                                    <td scope="row">
-                                        2012.12.12 (수) 오후 00:00:00
-                                    </td>
-                                    <td scope="row">
-                                        11111111
-                                    </td>
-                                    <td scope="row">
-                                        11111111
-                                    </td>
-                                    <td scope="row">
-                                        11111111
-                                    </td>
-                                    <td scope="row">
-                                        11111111
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <div class="text-right mb-2"><a href="" download="" class="btn btn-border">전체 주문내역 다운로드</a></div>
+                    <div class="fixed-table-container">
+                        <div class="fixed-table-wrapper" style="height: 500px;">
+                            <table id="tbl_employee" class="fixed-table">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <div class="th-text">고객번호</div>
+                                        </th>
+                                        <th>
+                                            <div class="th-text">주문번호</div>
+                                        </th>
+                                        <th>
+                                            <div class="th-text">상품주문번호</div>
+                                        </th>
+                                        <th class="w-250">
+                                            <div class="th-text">주문일시</div>
+                                        </th>
+                                        <th class="w-250">
+                                            <div class="th-text">발송시작일</div>
+                                        </th>
+                                        <th>
+                                            <div class="th-text">주문상태</div>
+                                        </th>
+                                        <th>
+                                            <div class="th-text">주문상태</div>
+                                        </th>
+                                        <th>
+                                            <div class="th-text">주문상태</div>
+                                        </th>
+                                        <th>
+                                            <div class="th-text">주문상태</div>
+                                        </th>
+                                        <th>
+                                            <div class="th-text">주문상태</div>
+                                        </th>
+                                        <th>
+                                            <div class="th-text">주문상태</div>
+                                        </th>
+                                        <th>
+                                            <div class="th-text">주문상태</div>
+                                        </th>
+                                        <th>
+                                            <div class="th-text">주문상태</div>
+                                        </th>
+                                        <th>
+                                            <div class="th-text">주문상태</div>
+                                        </th>
+                                        <th>
+                                            <div class="th-text">주문상태</div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-bottom">
+                                        <td scope="row">
+                                            11111111
+                                        </td>
+                                        <td scope="row">
+                                            <a href="#" class="" data-bs-toggle="modal" data-bs-target="#orderDetailModal"><u>1111111111111</u></a>
+                                        </td>
+                                        <td scope="row">
+                                            123456-7891011
+                                        </td>
+                                        <td scope="row" class="w-250">
+                                            2012.12.12 (수) 오후 00:00:00
+                                        </td>
+                                        <td scope="row" class="w-250">
+                                            2012.12.12 (수) 오후 00:00:00
+                                        </td>
+                                        <td scope="row">
+                                            11111111
+                                        </td>
+                                        <td scope="row">
+                                            11111111
+                                        </td>
+                                        <td scope="row">
+                                            11111111
+                                        </td>
+                                        <td scope="row">
+                                            11111111
+                                        </td>
+                                        <td scope="row">
+                                            11111111
+                                        </td>
+                                        <td scope="row">
+                                            11111111
+                                        </td>
+                                        <td scope="row">
+                                            11111111
+                                        </td>
+                                        <td scope="row">
+                                            11111111
+                                        </td>
+                                        <td scope="row">
+                                            11111111
+                                        </td>
+                                        <td scope="row">
+                                            11111111
+                                        </td>
+                                    </tr>
+                            </table>
+                        </div>
                     </div>
+
+                    <nav aria-label="navigation" class="d-flex justify-content-center mt-5 align-items-center">
+                        <p class="mb-0 mr-3">총 222건</p>
+                        <ul class="pagination m-0">
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <li class="page-item"><a class="page-link active" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <select id="" class="form-select form-control small_select ml-3">
+                            <option>50쪽</option>
+                            <option>option</option>
+                            <option>option</option>
+                        </select>
+                    </nav>
                 </div>
             </section>
+        </div>
+
+        <!-- ============================== 주문정보 상세 모달 ============================== -->
+        <div class="modal fade form_modal" id="orderDetailModal" tabindex="-1" >
+            <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header justify-content-center">
+                        <button type="button" class="btn-close border-0 bg-white" data-bs-dismiss="modal"
+                            aria-label="Close">나가기</button>
+                        <h5 class="modal-title text-center" id="exampleModalLabel">상품 주문 정보 상세</h5>
+                    </div>
+                    <div class="modal-body">
+                        <ul class="mb-4">
+                            <li>
+                                <dl class="d-flex mb-0">
+                                    <dt>주문번호</dt>
+                                    <dd class="ml-3">22222222222222</dd>
+                                </dl>
+                                <dl class="d-flex mb-0">
+                                    <dt>결제일시</dt>
+                                    <dd class="ml-3">2022.02.020(화) 오후 00:00:00</dd>
+                                </dl>
+                                <dl class="d-flex mb-0">
+                                    <dt>주문상세</dt>
+                                    <dd class="ml-3">배송완료</dd>
+                                </dl>
+                                <dl class="d-flex mb-0">
+                                    <dt>주문금액</dt>
+                                    <dd class="ml-3">30,000원</dd>
+                                </dl>
+                                <dl class="d-flex mb-0">
+                                    <dt>할인금액</dt>
+                                    <dd class="ml-3">0원</dd>
+                                </dl>
+                            </li>
+                        </ul>
+
+                        <h5>배송지 정보</h5>
+                        <ul class="mb-4">
+                            <li>
+                                <dl class="d-flex mb-0">
+                                    <dt>수취인명</dt>
+                                    <dd class="ml-3">김국룰</dd>
+                                </dl>
+                                <dl class="d-flex mb-0">
+                                    <dt>연락처</dt>
+                                    <dd class="ml-3">01011111111</dd>
+                                </dl>
+                                <dl class="d-flex mb-0">
+                                    <dt>배송지</dt>
+                                    <dd class="ml-3">서울시 강남구 테헤란로</dd>
+                                </dl>
+                                <dl class="d-flex mb-0">
+                                    <dt>요청사항</dt>
+                                    <dd class="ml-3"></dd>
+                                </dl>
+                            </li>
+                        </ul>
+
+                        <h5>주문자 정보</h5>
+                        <ul class="mb-4">
+                            <li>
+                                <dl class="d-flex mb-0">
+                                    <dt>연락처</dt>
+                                    <dd class="ml-3">01011111111</dd>
+                                </dl>
+                            </li>
+                        </ul>
+
+                        <h5>상품 정보</h5>
+                        <ul class="mb-4">
+                            <li>
+                                <dl class="d-flex mb-0">
+                                    <dt>상품명</dt>
+                                    <dd class="ml-3">호박고구마</dd>
+                                </dl>
+                                <dl class="d-flex mb-0">
+                                    <dt>옵션명</dt>
+                                    <dd class="ml-3">특/상 (3kg)</dd>
+                                </dl>
+                                <dl class="d-flex mb-0">
+                                    <dt>수량</dt>
+                                    <dd class="ml-3">1</dd>
+                                </dl>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary w-100">추가</button>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </div>

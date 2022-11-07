@@ -1,13 +1,43 @@
 /* common */
+@font-face {
+    font-family: "NotoSansKr";
+    src: url("../font/NotoSansKR-Bold.otf") format("opentype");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "NotoSansKr";
+    src: url("../font/NotoSansKR-Medium.otf") format("opentype");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "NotoSansKr";
+    src: url("../font/NotoSansKR-Regular.otf") format("opentype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "NotoSansKr";
+    src: url("../font/NotoSansKR-Light.otf") format("opentype");
+    font-weight: 300;
+}
+
+html,
+body {
+    font-family: 'NotoSansKr';
+    font-weight: 400;
+}
+
 body {
     min-height: 100vh;
     min-height: -webkit-fill-available;
-    color: #222;
+    color: #333;
 }
 
 html {
     height: -webkit-fill-available;
-    color: #222;
+    color: #333;
 }
 
 .form-text {
@@ -91,7 +121,7 @@ ul {
     transform: translateY(-50%) rotate(-90deg);
 }
 
-.side-bar .btn-toggle::after{
+.side-bar .btn-toggle::after {
     filter: invert(100%);
 }
 
@@ -100,6 +130,7 @@ ul {
     padding: .1875rem .5rem;
     margin-top: .125rem;
     padding-left: 1.25rem;
+    font-size: 16px;
     color: #fff;
 }
 
@@ -109,7 +140,7 @@ ul {
 
 .side-bar .btn-toggle-nav a:hover,
 .side-bar .btn-toggle-nav a:focus {
-    background-color: rgba(255,255,255,.2);
+    background-color: rgba(255, 255, 255, .2);
 }
 
 .user_info {
@@ -128,8 +159,10 @@ ul {
 .user_info a {
     color: #818181;
 }
+
 .user_info .info_btn {
     flex-shrink: 0;
+    padding: 0 0.2rem;
     border: 1px solid #818181;
     border-radius: 20px;
 }
@@ -146,10 +179,12 @@ ul {
     background: #666;
     border-radius: 100px;
 }
+
 .switch input {
     display: none;
 }
-.switch input + label {
+
+.switch input+label {
     position: absolute;
     top: 0;
     left: 0;
@@ -157,7 +192,8 @@ ul {
     height: 100%;
     cursor: pointer;
 }
-.switch input + label::before {
+
+.switch input+label::before {
     position: absolute;
     left: 1px;
     top: 50%;
@@ -170,7 +206,8 @@ ul {
     border-radius: 50%;
     transition: 0.5s;
 }
-.switch input:checked + label::before {
+
+.switch input:checked+label::before {
     left: 50%;
 }
 
@@ -218,6 +255,7 @@ ul {
     justify-content: center;
     margin-top: 50px;
 }
+
 .page-link {
     width: 24px;
     height: 24px;
@@ -238,7 +276,7 @@ ul {
 }
 
 .page-item:first-child .page-link,
-.page-item:last-child .page-link{
+.page-item:last-child .page-link {
     border-radius: 50%;
 }
 
@@ -250,7 +288,7 @@ ul {
     overflow-y: auto;
 }
 
-.content_box + .content_box {
+.content_box+.content_box {
     margin-top: 30px;
 }
 
@@ -264,6 +302,7 @@ ul {
 .form_modal .modal-header {
     position: relative;
 }
+
 .form_modal .btn-close {
     position: absolute;
     top: 50%;
@@ -287,16 +326,20 @@ ul {
 .table {
     /* table-layout: fixed; */
 }
+
 .table-fixed {
     table-layout: fixed;
 }
+
 .table thead {
     border-top: 2px solid #000;
 }
+
 .table th {
     white-space: nowrap;
 }
-.min-table.table td, 
+
+.min-table.table td,
 .min-table.table tr {
     min-width: 10rem;
 }
@@ -317,6 +360,64 @@ ul {
 .table span {
     font-weight: normal;
 }
+
+
+/* table Header 고정 tbody scroll ====================================== */
+.fixed-table-container {
+    overflow-x: auto;
+}
+
+.fixed-table-header-bg {
+    text-align: center;
+    color: #666;
+    background: #eee;
+    font-weight: bold;
+    height: 50px;
+    /* header-bg height값 */
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.fixed-table-container table {
+    /* width: 100%; */
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.fixed-table-wrapper {
+    position: relative;
+    overflow-y: scroll;
+}
+
+.fixed-table-wrapper thead th {
+    position: sticky;
+    top: 0;
+    background: #eee;
+}
+
+.fixed-table-container tr {
+    white-space: nowrap;
+}
+
+.fixed-table-container thead th,
+.fixed-table-container tbody td{
+    width: 150px;
+    padding: 15px 30px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #dedede;
+    border-right: 1px solid #ddd;
+    word-break: break-all;
+}
+
+.w-250 {
+    width: 250px;
+}
+.w-300 {
+    width: 300px;
+}
+
 
 /* 고정 되는 박스 */
 .fixed_box {
