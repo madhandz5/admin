@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document admin</title>
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <script defer src="../js/jquery-3.6.0.js"></script>
+
+</head>
+
+<body>
+    <!-- 주문내역 -->
+
+    <div id="wrap">
+        <div class="d-flex" style="flex-wrap:nowrap;">
+            <!-- 사이드바 -->
+            <div class="side-bar d-flex flex-column flex-shrink-0 scrollarea">
+                <a href="./index.html" class="d-flex align-items-center text-white text-decoration-none">
+                    <span class="fs-4 m-3" style="width:40px;">
+                        <img class="img-fluid" src="../images/logo.svg" alt="" style="filter: invert(100%);">
+                    </span>
+                </a>
+                <ul class="list-unstyled ps-0">
+                    <li class="mb-1 line-top">
+                        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                            data-bs-toggle="collapse" data-bs-target="#info-collapse" aria-expanded="true">
+                            판매자 정보
+                        </button>
+                        <div class="collapse show" id="info-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li><a href="./basic_info.html"
+                                        class="link-dark d-inline-flex text-decoration-none rounded">기본정보</a>
+                                </li>
+                                <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">주소록</a>
+                                </li>
+                                <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">매니저관리</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="mb-1 line-top">
+                        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                            data-bs-toggle="collapse" data-bs-target="#prd-collapse" aria-expanded="true">
+                            상품 관리
+                        </button>
+                        <div class="collapse show" id="prd-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">상품등록</a>
+                                </li>
+                                <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">상품목록</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="mb-1 line-top">
+                        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                            data-bs-toggle="collapse" data-bs-target="#coupon-collapse" aria-expanded="true">
+                            쿠폰 관리
+                        </button>
+                        <div class="collapse show" id="coupon-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">쿠폰 목록</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="mb-1 line-top">
+                        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                            data-bs-toggle="collapse" data-bs-target="#order-collapse" aria-expanded="true">
+                            주문 관리
+                        </button>
+                        <div class="collapse show" id="order-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li>
+                                    <a href="#" class="link-dark d-inline-flex text-decoration-none rounded">
+                                        주문 내역
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="link-dark d-inline-flex text-decoration-none rounded">
+                                        발주/발송 관리
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="link-dark d-inline-flex text-decoration-none rounded">
+                                        교환 관리
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="link-dark d-inline-flex text-decoration-none rounded">
+                                        반품관리
+                                    </a>
+                                </li>
+                                <li class="active">
+                                    <a href="#" class="link-dark d-inline-flex text-decoration-none rounded">
+                                        선물 수락대기
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="mb-1 line-top">
+                        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                            data-bs-toggle="collapse" data-bs-target="#inquiry-collapse" aria-expanded="true">
+                            문의 관리
+                        </button>
+                        <div class="collapse show" id="inquiry-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li>
+                                    <a href="#" class="link-dark d-inline-flex text-decoration-none rounded">
+                                        1:1 문의 관리
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="mb-1 line-top">
+                        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                            data-bs-toggle="collapse" data-bs-target="#calculate-collapse" aria-expanded="true">
+                            정산 관리
+                        </button>
+                        <div class="collapse show" id="calculate-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li>
+                                    <a href="#" class="link-dark d-inline-flex text-decoration-none rounded">
+                                        정산 내역
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="mb-1 line-top">
+                        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                            data-bs-toggle="collapse" data-bs-target="#notice-collapse" aria-expanded="true">
+                            공지사항
+                        </button>
+                        <div class="collapse show" id="notice-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li>
+                                    <a href="#" class="link-dark d-inline-flex text-decoration-none rounded">
+                                        공지사항
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="link-dark d-inline-flex text-decoration-none rounded">
+                                        가이드 모음
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="mb-1 line-top">
+                        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                            data-bs-toggle="collapse" data-bs-target="#terms-collapse" aria-expanded="true">
+                            약관 및 정책
+                        </button>
+                        <div class="collapse show" id="terms-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li>
+                                    <a href="#" class="link-dark d-inline-flex text-decoration-none rounded">
+                                        판매자 이용약관
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="link-dark d-inline-flex text-decoration-none rounded">
+                                        전자금융거래 이용약관
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="link-dark d-inline-flex text-decoration-none rounded">
+                                        개인정보처리방침
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <div class="user_info p-2">
+                    <div class="d-flex align-items-start">
+                        <p class="mr-2"><span>프래프</span>님</p>
+                        <a href="" class="info_btn">내정보</a>
+                    </div>
+                    <a href="" class="logout ml-auto">로그아웃</a>
+                </div>
+            </div>
+            <!-- 컨텐츠 -->
+            <section class="content_area p-5 pb-7 w-100">
+                <div class="d-flex align-items-start">
+                    <h3 class="">선물 수락대기</h3>
+                </div>
+
+                <div class="shadow p-3 rounded mt-4">
+                    <h5 class="">주문요약정보</h5>
+                    <p class="mb-1 font-weight-bold text-gray">선물하기를 통한 주문건으로 수신자가 선물 수락을 하지 않은 상태의 주문건을 확인 하실 수 있습니다.
+                    </p>
+                    <ul>
+                        <li class="text-gray">* 배송상품 수락대기 : 수신자가 배송지를 입력하지 않은 상태이며 수락기한내 배송지 미입력시 주문은 자동 취소됩니다.</li>
+                        <li class="text-gray">* 수락기한내 배송지 입력시 해당 주문건은 발주/발성관리 메뉴로 이동되며, 주문건 확인 후 발송처리를 진행하시면 됩니다.</li>
+                        <li class="text-green">* 선물하기 주문은 구매자 결제 이수, 선물 수싲나가 배송지 정보를 입력하는 형태롤 제뉴/도서산간지역 추가배송비가 적용되지
+                            않습니다. <br>
+                            구매자문께 추가 배송비를 별도 입금을 받으시거나, 수신자분께 착불로 추가배송비가 지불되어야 함을 안내해 주세요.
+                        </li class="text-gray">
+                    </ul>
+                </div>
+
+                <div class="shadow p-3 rounded mt-4">
+                    <p class="font-weight-bold">목록
+                        <span class="font-weight-normal">
+                            (총
+                            <b class="text-green">2</b>
+                            건)
+                        </span>
+                    </p>
+                    <div class="fixed-table-container">
+                        <div class="fixed-table-wrapper" style="height: 500px;">
+                            <table id="tbl_employee" class="fixed-table">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <div class="th-text">상품주문번호</div>
+                                        </th>
+                                        <th>
+                                            <div class="th-text">주문번호</div>
+                                        </th>
+                                        <th>
+                                            <div class="th-text">주문상태</div>
+                                        </th>
+                                        <th>
+                                            <div class="th-text">주문일시</div>
+                                        </th>
+                                        <th>
+                                            <div class="th-text">구매자명</div>
+                                        </th>
+                                        <th>
+                                            <div class="th-text">구매자ID</div>
+                                        </th>
+                                        <th>
+                                            <div class="th-text">선물 수신자 이름</div>
+                                        </th>
+                                        <th>
+                                            <div class="th-text">선물 수신자 ID</div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-bottom">
+                                        <td scope="row">
+                                            11111111
+                                        </td>
+                                        <td scope="row">
+                                            <a href="#" class="" data-bs-toggle="modal"
+                                                data-bs-target="#orderDetailModal"><u>1111111111111</u></a>
+                                        </td>
+                                        <td scope="row">
+                                            123456-7891011
+                                        </td>
+                                        <td scope="row" class="w-250">
+                                            2012.12.12 (수) 오후 00:00:00
+                                        </td>
+                                        <td scope="row" class="w-250">
+                                            김국룰
+                                        </td>
+                                        <td scope="row">
+                                            dlsskjd
+                                        </td>
+                                        <td scope="row">
+                                            김국룰
+                                        </td>
+                                        <td scope="row">
+                                            dlakdjasdfk
+                                        </td>
+                                    </tr>
+                                    <tr class="no_content">
+                                        <td>데이터가 존재하지 않습니다.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <nav aria-label="navigation" class="d-flex justify-content-center mt-5 align-items-center">
+                        <p class="mb-0 mr-3">총 222건</p>
+                        <ul class="pagination m-0">
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <li class="page-item"><a class="page-link active" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <select id="" class="form-select form-control small_select ml-3">
+                            <option>50쪽</option>
+                            <option>option</option>
+                            <option>option</option>
+                        </select>
+                    </nav>
+                </div>
+            </section>
+        </div>
+
+        <!-- ============================== 주문정보 상세 모달 ============================== -->
+        <div class="modal fade form_modal" id="orderDetailModal" tabindex="-1">
+            <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header justify-content-center">
+                        <button type="button" class="btn-close border-0 bg-white" data-bs-dismiss="modal"
+                            aria-label="Close">나가기</button>
+                        <h5 class="modal-title text-center" id="exampleModalLabel">상품 주문 정보 상세</h5>
+                    </div>
+                    <div class="modal-body">
+                        <ul class="mb-4">
+                            <li>
+                                <dl class="d-flex mb-0">
+                                    <dt>주문번호</dt>
+                                    <dd class="ml-3">22222222222222</dd>
+                                </dl>
+                                <dl class="d-flex mb-0">
+                                    <dt>결제일시</dt>
+                                    <dd class="ml-3">2022.02.020(화) 오후 00:00:00</dd>
+                                </dl>
+                                <dl class="d-flex mb-0">
+                                    <dt>주문상세</dt>
+                                    <dd class="ml-3">배송완료</dd>
+                                </dl>
+                                <dl class="d-flex mb-0">
+                                    <dt>주문금액</dt>
+                                    <dd class="ml-3">30,000원</dd>
+                                </dl>
+                                <dl class="d-flex mb-0">
+                                    <dt>할인금액</dt>
+                                    <dd class="ml-3">0원</dd>
+                                </dl>
+                            </li>
+                        </ul>
+
+                        <h5>배송지 정보</h5>
+                        <ul class="mb-4">
+                            <li>
+                                <dl class="d-flex mb-0">
+                                    <dt>수취인명</dt>
+                                    <dd class="ml-3">김국룰</dd>
+                                </dl>
+                                <dl class="d-flex mb-0">
+                                    <dt>연락처</dt>
+                                    <dd class="ml-3">01011111111</dd>
+                                </dl>
+                                <dl class="d-flex mb-0">
+                                    <dt>배송지</dt>
+                                    <dd class="ml-3">서울시 강남구 테헤란로</dd>
+                                </dl>
+                                <dl class="d-flex mb-0">
+                                    <dt>요청사항</dt>
+                                    <dd class="ml-3"></dd>
+                                </dl>
+                            </li>
+                        </ul>
+
+                        <h5>주문자 정보</h5>
+                        <ul class="mb-4">
+                            <li>
+                                <dl class="d-flex mb-0">
+                                    <dt>연락처</dt>
+                                    <dd class="ml-3">01011111111</dd>
+                                </dl>
+                            </li>
+                        </ul>
+
+                        <h5>상품 정보</h5>
+                        <ul class="mb-0">
+                            <li>
+                                <dl class="d-flex mb-0">
+                                    <dt>상품명</dt>
+                                    <dd class="ml-3">호박고구마</dd>
+                                </dl>
+                                <dl class="d-flex mb-0">
+                                    <dt>옵션명</dt>
+                                    <dd class="ml-3">특/상 (3kg)</dd>
+                                </dl>
+                                <dl class="d-flex mb-0">
+                                    <dt>수량</dt>
+                                    <dd class="ml-3">1</dd>
+                                </dl>
+                            </li>
+                            <li class="border-top pt-2">
+                                <dl class="d-flex mb-0">
+                                    <dt>상품명</dt>
+                                    <dd class="ml-3">호박고구마</dd>
+                                </dl>
+                                <dl class="d-flex mb-0">
+                                    <dt>옵션명</dt>
+                                    <dd class="ml-3">특/상 (3kg)</dd>
+                                </dl>
+                                <dl class="d-flex mb-0">
+                                    <dt>수량</dt>
+                                    <dd class="ml-3">1</dd>
+                                </dl>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="modal-footer d-flex">
+                        <button type="button" class="btn btn-border" class="btn-close border-0 bg-white"
+                            data-bs-dismiss="modal" aria-label="Close">취소</button>
+                        <button type="button" class="btn btn-border">교환처리</button>
+                        <button type="button" class="btn btn-border">반품처리</button>
+                        <button type="button" class="btn btn-border">판매취소</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script defer src="../js/bootstrap.js"></script>
+    <script defer src="../js/bootstrap.bundle.min.js"></script>
+    <script defer src="../js/common.js"></script>
+</body>
+
+</html>

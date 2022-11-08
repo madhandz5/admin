@@ -69,11 +69,139 @@ ul {
     font-size: 13px;
 }
 
+
+.scrollarea {
+    overflow-y: auto;
+}
+
+/* 스위치 */
+.switch {
+    position: relative;
+    width: 40px;
+    height: 20px;
+    background: #666;
+    border-radius: 100px;
+}
+
+.switch input {
+    display: none;
+}
+
+.switch input+label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.switch input+label::before {
+    position: absolute;
+    left: 1px;
+    top: 50%;
+    content: "";
+    display: block;
+    width: 18px;
+    height: 18px;
+    transform: translateY(-50%);
+    background: #fff;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+.switch input:checked+label::before {
+    left: 50%;
+}
+
+.form-check * {
+    cursor: pointer;
+}
+
+/* 셀렉트 */
+.small_select {
+    flex-shrink: 0;
+    width: 115px;
+}
+
+/* 뱃지 */
+.badge-green {
+    background: #e2fdd0;
+    color: green;
+}
+
+.badge-purple {
+    background: #e8deff;
+    color: #8d18ab;
+}
+
+.badge-red {
+    background: #ffe6e1;
+    color: #f55e5e;
+}
+
+.badge-gray {
+    background: #eee;
+}
+
+.btn-question {
+    width: 15px;
+    height: 15px;
+    padding: 0;
+    line-height: 1;
+    font-size: 12px;
+    border: 1px solid #888;
+    border-radius: 50%;
+    color: #888;
+}
+
+.btn:disabled {
+    opacity: 0.3;
+}
+
+.btn-gray {
+    border: 1px solid #666;
+}
+
+.text-green {
+    color: #4fd32e;
+}
+
+/* 페이지네이션 */
+.pagination {
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.page-link {
+    width: 26px;
+    height: 26px;
+    margin: 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    padding: 0;
+    line-height: 1;
+    border: none;
+    color: #222;
+}
+
+.page-link.active {
+    background: var(--primary);
+    color: #fff;
+}
+
+.page-item:first-child .page-link,
+.page-item:last-child .page-link {
+    border-radius: 5px;
+}
+
 /* 사이드바 */
 .side-bar {
-    width: 250px;
+    width: 260px;
     height: 100vh;
-    background: var(--gray-dark);
+    background: #000;
     color: #fff;
 }
 
@@ -167,120 +295,6 @@ ul {
     border-radius: 20px;
 }
 
-.scrollarea {
-    overflow-y: auto;
-}
-
-/* 스위치 */
-.switch {
-    position: relative;
-    width: 40px;
-    height: 20px;
-    background: #666;
-    border-radius: 100px;
-}
-
-.switch input {
-    display: none;
-}
-
-.switch input+label {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-}
-
-.switch input+label::before {
-    position: absolute;
-    left: 1px;
-    top: 50%;
-    content: "";
-    display: block;
-    width: 18px;
-    height: 18px;
-    transform: translateY(-50%);
-    background: #fff;
-    border-radius: 50%;
-    transition: 0.5s;
-}
-
-.switch input:checked+label::before {
-    left: 50%;
-}
-
-.form-check * {
-    cursor: pointer;
-}
-
-/* 셀렉트 */
-.small_select {
-    flex-shrink: 0;
-    width: 115px;
-}
-
-/* 뱃지 */
-.badge-green {
-    background: #e2fdd0;
-    color: green;
-}
-
-.badge-purple {
-    background: #e8deff;
-    color: #8d18ab;
-}
-
-.badge-red {
-    background: #ffe6e1;
-    color: #f55e5e;
-}
-
-.badge-gray {
-    background: #eee;
-}
-
-.btn-question {
-    width: 18px;
-    height: 18px;
-    padding: 0;
-    line-height: 1;
-    border: 1px solid #888;
-    border-radius: 50%;
-}
-
-/* 페이지네이션 */
-.pagination {
-    justify-content: center;
-    margin-top: 50px;
-}
-
-.page-link {
-    width: 24px;
-    height: 24px;
-    margin: 0 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    padding: 0;
-    line-height: 1;
-    border: none;
-    color: #222;
-}
-
-.page-link.active {
-    background: #b5d2ff;
-    font-weight: bold;
-}
-
-.page-item:first-child .page-link,
-.page-item:last-child .page-link {
-    border-radius: 50%;
-}
-
-
 /* 컨텐츠 영역 */
 .content_area {
     min-width: 1280px;
@@ -361,6 +375,19 @@ ul {
     font-weight: normal;
 }
 
+.no_content {
+    width: 100%;
+    border: none;
+}
+
+.no_content td {
+    position: sticky;
+    left: 50%;
+    padding-top: 50px !important;
+    color: #ccc;
+    border: none !important;
+    transform: translateX(-50%);
+}
 
 /* table Header 고정 tbody scroll ====================================== */
 .fixed-table-container {
@@ -388,7 +415,7 @@ ul {
 
 .fixed-table-wrapper {
     position: relative;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .fixed-table-wrapper thead th {
@@ -402,7 +429,7 @@ ul {
 }
 
 .fixed-table-container thead th,
-.fixed-table-container tbody td{
+.fixed-table-container tbody td {
     width: 150px;
     padding: 15px 30px;
     box-sizing: border-box;
@@ -414,6 +441,7 @@ ul {
 .w-250 {
     width: 250px;
 }
+
 .w-300 {
     width: 300px;
 }
@@ -432,4 +460,76 @@ ul {
     /* width: calc(100% - 250px + 1280px); */
     width: 500px;
     padding: 0.7rem 3rem;
+}
+
+
+/* 발주/발송 관리 */
+.order_send_list {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+
+.order_send_list>li {
+    position: relative;
+    display: table-cell;
+    padding: 20px 15px;
+    background: #f5f5f5;
+}
+
+.order_send_list>li+li {
+    padding-left: 25px;
+    border-left: 1px solid #d5d5d5;
+}
+
+.order_send_list>li+li::before {
+    position: absolute;
+    left: 0;
+    top: 45%;
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: #f5f5f5;
+    border: 1px solid #d5d5d5;
+    border-left: none;
+    border-bottom: none;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.order_send_list .tab-btn {
+    padding: 0;
+    border: none;
+}
+
+.order_send_list .tab-btn.active {
+    padding: 5px;
+    color: var(--primary);
+    background-color: rgba(0, 0, 0, .1);
+    border-radius: 5px;
+}
+
+.order_send_list .tab-btn:hover {
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, .1);
+}
+
+.order_send_list .bottom_txt {}
+
+.order_send_list .text-gray {
+    display: block;
+    margin-top: 10px;
+}
+
+.text-gray {
+    color: #777;
+}
+
+/* 탭 */
+.tab_sect {
+    display: none;
+}
+
+.tab_sect.active {
+    display: block;
 }
