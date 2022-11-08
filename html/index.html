@@ -96,6 +96,11 @@
                                         반품관리
                                     </a>
                                 </li>
+                                <li>
+                                    <a href="#" class="link-dark d-inline-flex text-decoration-none rounded">
+                                        선물 수락대기
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                     </li>
@@ -178,79 +183,124 @@
             </div>
             <!-- 컨텐츠 -->
             <section class="content_area p-5 w-100">
-                <h1 class="font-weight-normal">대시보드</h1>
+                <h3 class="font-weight-normal">대시보드</h3>
 
                 <div class="shadow p-3 rounded">
-                    <h5 class="font-weight-bold">주문 및 배송</h5>
-                    <div class="d-flex">
-                        <dl class="col-3 d-flex p-0 mb-0">
-                            <dt>신규주문</dt>
-                            <dd class="ml-2"><a href="">1</a>건</dd>
-                        </dl>
-                        <dl class="col-3 d-flex p-0 mb-0">
-                            <dt>신규주문</dt>
-                            <dd class="ml-2"><a href="">1</a>건</dd>
-                        </dl>
-                        <dl class="col-3 d-flex p-0 mb-0">
-                            <dt>신규주문</dt>
-                            <dd class="ml-2"><a href="">1</a>건</dd>
-                        </dl>
-                    </div>
+                    <h5 class="mb-3">주문 및 배송</h5>
+                    <ul class="d-flex">
+                        <li class="col-3 d-flex">
+                            <dl class="d-flex p-0 mb-0">
+                                <dt class="font-weight-normal">신규주문</dt>
+                                <dd class="ml-2"><a href="" class="font-weight-bold">1</a>건</dd>
+                            </dl>
+                            <button type="button" class="btn btn-question ml-1" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">?</button>
+                        </li>
+                        <li class="col-3 d-flex">
+                            <dl class="d-flex p-0 mb-0">
+                                <dt class="font-weight-normal">발송대기</dt>
+                                <dd class="ml-2"><a href="" class="font-weight-bold">1</a>건</dd>
+                            </dl>
+                            <button type="button" class="btn btn-question ml-1" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">?</button>
+                        </li>
+                        <li class="col-3 d-flex">
+                            <dl class="d-flex p-0 mb-0">
+                                <dt class="font-weight-normal">배송중</dt>
+                                <dd class="ml-2"><a href="" class="font-weight-bold">1</a>건</dd>
+                            </dl>
+                            <button type="button" class="btn btn-question ml-1" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">?</button>
+                        </li>
+                    </ul>
                 </div>
 
                 <div class="shadow p-3 rounded mt-4">
-                    <h5 class="font-weight-bold">지연 및 문제건</h5>
-                    <div class="d-flex">
-                        <dl class="col-3 d-flex p-0 mb-0">
-                            <dt>신규주문</dt>
-                            <dd class="ml-2"><a href="">1</a>건</dd>
-                        </dl>
-                        <dl class="col-3 d-flex p-0 mb-0">
-                            <dt>신규주문</dt>
-                            <dd class="ml-2"><a href="">1</a>건</dd>
-                        </dl>
-                        <dl class="col-3 d-flex p-0 mb-0">
-                            <dt>신규주문</dt>
-                            <dd class="ml-2"><a href="">1</a>건</dd>
-                        </dl>
-                        <dl class="col-3 d-flex p-0 mb-0">
-                            <dt>신규주문</dt>
-                            <dd class="ml-2"><a href="">1</a>건</dd>
-                        </dl>
-                    </div>
+                    <h5 class="mb-3">지연 및 문제건</h5>
+                    <ul class="d-flex">
+                        <li class="col-3 d-flex">
+                            <dl class="d-flex p-0 mb-0">
+                                <dt class="font-weight-normal">발주지연</dt>
+                                <dd class="ml-2"><a href="" class="font-weight-bold">1</a>건</dd>
+                            </dl>
+                            <button type="button" class="btn btn-question ml-1" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">?</button>
+                        </li>
+                        <li class="col-3 d-flex">
+                            <dl class="d-flex p-0 mb-0">
+                                <dt class="font-weight-normal">발송지연</dt>
+                                <dd class="ml-2"><a href="" class="font-weight-bold">1</a>건</dd>
+                            </dl>
+                            <button type="button" class="btn btn-question ml-1" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">?</button>
+                        </li>
+                        <li class="col-3 d-flex">
+                            <dl class="d-flex p-0 mb-0">
+                                <dt class="font-weight-normal">배송추적 실패</dt>
+                                <dd class="ml-2"><a href="" class="font-weight-bold">1</a>건</dd>
+                            </dl>
+                            <button type="button" class="btn btn-question ml-1" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">?</button>
+                        </li>
+                        <li class="col-3 d-flex">
+                            <dl class="d-flex p-0 mb-0">
+                                <dt class="font-weight-normal">배송지연</dt>
+                                <dd class="ml-2"><a href="" class="font-weight-bold">1</a>건</dd>
+                            </dl>
+                            <button type="button" class="btn btn-question ml-1" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">?</button>
+                        </li>
+                    </ul>
                 </div>
 
                 <div class="shadow p-3 rounded mt-4">
-                    <h5 class="font-weight-bold">클래임</h5>
-                    <div class="d-flex">
-                        <dl class="col-3 d-flex p-0 mb-0">
-                            <dt>신규주문</dt>
-                            <dd class="ml-2"><a href="">1</a>건</dd>
-                        </dl>
-                        <dl class="col-3 d-flex p-0 mb-0">
-                            <dt>신규주문</dt>
-                            <dd class="ml-2"><a href="">1</a>건</dd>
-                        </dl>
-                        <dl class="col-3 d-flex p-0 mb-0">
-                            <dt>신규주문</dt>
-                            <dd class="ml-2"><a href="">1</a>건</dd>
-                        </dl>
-                    </div>
+                    <h5 class="mb-3">클래임</h5>
+                    <ul class="d-flex">
+                        <li class="d-flex col-2" >
+                            <dl class="d-flex p-0 mb-0">
+                                <dt class="font-weight-normal">반품요청</dt>
+                                <dd class="ml-2"><a href="" class="font-weight-bold">1</a>건</dd>
+                            </dl>
+                            <button type="button" class="btn btn-question ml-1" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">?</button>
+                        </li>
+                        <li class="d-flex col-2" >
+                            <dl class="d-flex p-0 mb-0">
+                                <dt class="font-weight-normal">반품지연</dt>
+                                <dd class="ml-2"><a href="" class="font-weight-bold">1</a>건</dd>
+                            </dl>
+                            <button type="button" class="btn btn-question ml-1" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">?</button>
+                        </li>
+                        <li class="d-flex col-2" >
+                            <dl class="d-flex p-0 mb-0">
+                                <dt class="font-weight-normal">교환요청</dt>
+                                <dd class="ml-2"><a href="" class="font-weight-bold">1</a>건</dd>
+                            </dl>
+                            <button type="button" class="btn btn-question ml-1" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">?</button>
+                        </li>
+                        <li class="d-flex col-2" >
+                            <dl class="d-flex p-0 mb-0">
+                                <dt class="font-weight-normal">교환지연</dt>
+                                <dd class="ml-2"><a href="" class="font-weight-bold">1</a>건</dd>
+                            </dl>
+                            <button type="button" class="btn btn-question ml-1" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">?</button>
+                        </li>
+                        <li class="d-flex col-2" >
+                            <dl class="d-flex p-0 mb-0">
+                                <dt class="font-weight-normal">답변필요</dt>
+                                <dd class="ml-2"><a href="" class="font-weight-bold">1</a>건</dd>
+                            </dl>
+                            <button type="button" class="btn btn-question ml-1" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">?</button>
+                        </li>
+                    </ul>
                 </div>
 
                 <div class="shadow p-3 rounded mt-4">
-                    <h5 class="font-weight-bold">정산</h5>
+                    <h5 class="mb-3">정산</h5>
                     <div class="d-flex">
-                        <dl class="col-3 d-flex p-0 mb-0">
-                            <dt>오늘 정산금액</dt>
+                        <dl class="d-flex p-0 mb-0">
+                            <dt class="font-weight-normal">오늘 정산금액</dt>
                             <dd class="ml-2"><a href="">11,111</a>원</dd>
                         </dl>
+                        <button type="button" class="btn btn-question ml-1" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">?</button>
                     </div>
                 </div>
 
                 <div class="shadow p-3 rounded mt-4">
                     <div class="d-flex justify-content-between">
-                        <h5 class="font-weight-bold">공지사항</h5>
+                        <h5 class="mb-3">공지사항</h5>
                         <a href="" class="text-dark">더보기 ></a>
                     </div>
                     <ul class="p-0">
