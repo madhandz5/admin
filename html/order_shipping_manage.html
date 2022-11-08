@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document admin</title>
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <script defer src="../js/jquery-3.6.0.js"></script>
+
+</head>
+
+<body>
+    <!-- 발주/발송 관리 -->
+
+    <div id="wrap">
+        <div class="d-flex" style="flex-wrap:nowrap;">
+            <!-- 사이드바 -->
+            <div class="side-bar d-flex flex-column flex-shrink-0 scrollarea">
+                <a href="./index.html" class="d-flex align-items-center text-white text-decoration-none">
+                    <span class="fs-4 m-3" style="width:40px;">
+                        <img class="img-fluid" src="../images/logo.svg" alt="" style="filter: invert(100%);">
+                    </span>
+                </a>
+                <ul class="list-unstyled ps-0">
+                    <li class="mb-1 line-top">
+                        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                            data-bs-toggle="collapse" data-bs-target="#info-collapse" aria-expanded="true">
+                            판매자 정보
+                        </button>
+                        <div class="collapse show" id="info-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li><a href="./basic_info.html"
+                                        class="link-dark d-inline-flex text-decoration-none rounded">기본정보</a>
+                                </li>
+                                <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">주소록</a>
+                                </li>
+                                <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">매니저관리</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="mb-1 line-top">
+                        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                            data-bs-toggle="collapse" data-bs-target="#prd-collapse" aria-expanded="true">
+                            상품 관리
+                        </button>
+                        <div class="collapse show" id="prd-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">상품등록</a>
+                                </li>
+                                <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">상품목록</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="mb-1 line-top">
+                        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                            data-bs-toggle="collapse" data-bs-target="#coupon-collapse" aria-expanded="true">
+                            쿠폰 관리
+                        </button>
+                        <div class="collapse show" id="coupon-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">쿠폰 목록</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="mb-1 line-top">
+                        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                            data-bs-toggle="collapse" data-bs-target="#order-collapse" aria-expanded="true">
+                            주문 관리
+                        </button>
+                        <div class="collapse show" id="order-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li>
+                                    <a href="#" class="link-dark d-inline-flex text-decoration-none rounded">
+                                        주문 내역
+                                    </a>
+                                </li>
+                                <li class="active">
+                                    <a href="#" class="link-dark d-inline-flex text-decoration-none rounded">
+                                        발주/발송 관리
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="link-dark d-inline-flex text-decoration-none rounded">
+                                        교환 관리
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="link-dark d-inline-flex text-decoration-none rounded">
+                                        반품관리
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="link-dark d-inline-flex text-decoration-none rounded">
+                                        선물 수락대기
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="mb-1 line-top">
+                        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                            data-bs-toggle="collapse" data-bs-target="#inquiry-collapse" aria-expanded="true">
+                            문의 관리
+                        </button>
+                        <div class="collapse show" id="inquiry-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li>
+                                    <a href="#" class="link-dark d-inline-flex text-decoration-none rounded">
+                                        1:1 문의 관리
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="mb-1 line-top">
+                        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                            data-bs-toggle="collapse" data-bs-target="#calculate-collapse" aria-expanded="true">
+                            정산 관리
+                        </button>
+                        <div class="collapse show" id="calculate-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li>
+                                    <a href="#" class="link-dark d-inline-flex text-decoration-none rounded">
+                                        정산 내역
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="mb-1 line-top">
+                        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                            data-bs-toggle="collapse" data-bs-target="#notice-collapse" aria-expanded="true">
+                            공지사항
+                        </button>
+                        <div class="collapse show" id="notice-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li>
+                                    <a href="#" class="link-dark d-inline-flex text-decoration-none rounded">
+                                        공지사항
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="link-dark d-inline-flex text-decoration-none rounded">
+                                        가이드 모음
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="mb-1 line-top">
+                        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                            data-bs-toggle="collapse" data-bs-target="#terms-collapse" aria-expanded="true">
+                            약관 및 정책
+                        </button>
+                        <div class="collapse show" id="terms-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li>
+                                    <a href="#" class="link-dark d-inline-flex text-decoration-none rounded">
+                                        판매자 이용약관
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="link-dark d-inline-flex text-decoration-none rounded">
+                                        전자금융거래 이용약관
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="link-dark d-inline-flex text-decoration-none rounded">
+                                        개인정보처리방침
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <div class="user_info p-2">
+                    <div class="d-flex align-items-start">
+                        <p class="mr-2"><span>프래프</span>님</p>
+                        <a href="" class="info_btn">내정보</a>
+                    </div>
+                    <a href="" class="logout ml-auto">로그아웃</a>
+                </div>
+            </div>
+            <!-- 컨텐츠 -->
+            <section class="content_area p-5 pb-7 w-100">
+                <div class="d-flex align-items-start">
+                    <h3 class="">발주/발송 관리</h3>
+                    <a href="" download="" class="btn btn-primary ml-3">가이드 다운로드</a>
+                </div>
+
+                <div class="shadow p-3 rounded mt-4">
+                    <h5 class="">주문 및 배송 현황</h5>
+                    <ul class="order_send_list">
+                        <li class="nav-item">
+                            <div>
+                                <button type="button" class="tab-btn active tab_item" data-tab="tabmenu_01">
+                                    <b>신규주문 <span class="text-primary">2</span></b>건
+                                </button>
+                                <button type="button" class="btn btn-question" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">?</button>
+                            </div>
+                            <small class="text-gray">발주 확인이 필요한<br> 상품주문 건입니다.</small>
+                            <div class="bottom_txt mt-4">
+                                <p>
+                                    <b>발주지연</b>
+                                    <b class="text-danger">0</b>
+                                    건
+                                    <button type="button" class="btn btn-question" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">?</button>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <button type="button" class="tab-btn tab_item" data-tab="tabmenu_02">
+                                    <b>발송대기 <span class="text-primary">2</span></b>건
+                                </button>
+                                <button type="button" class="btn btn-question" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">?</button>
+                            </div>
+                            <small class="text-gray">송장번호를 등록하여<br> 발송처리 하세요.</small>
+                            <div class="bottom_txt mt-4">
+                                <p>
+                                    <b>발주지연</b>
+                                    <b class="text-danger">0</b>
+                                    건
+                                    <button type="button" class="btn btn-question" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">?</button>
+                                </p>
+                                <p>
+                                    <b>장기 미발송</b>
+                                    <b class="text-danger">0</b>
+                                    건
+                                    <button type="button" class="btn btn-question" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">?</button>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <button type="button" class="tab-btn tab_item" data-tab="tabmenu_03">
+                                    <b>발송처리 완료 <span class="text-primary">2</span></b>건
+                                </button>
+                                <button type="button" class="btn btn-question" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">?</button>
+                            </div>
+                            <small class="text-gray">송장번호가 등록된 상품이<br>발송을 대기중입니다.</small>
+                            <div class="bottom_txt mt-4">
+                                <p>
+                                    <b>배송추적 실패</b>
+                                    <b class="text-danger">0</b>
+                                    건
+                                    <button type="button" class="btn btn-question" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">?</button>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <button type="button" class="tab-btn tab_item" data-tab="tabmenu_04">
+                                    <b>배송중 <span class="text-primary">2</span></b>건
+                                </button>
+                                <button type="button" class="btn btn-question" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">?</button>
+                            </div>
+                            <small class="text-gray">발홍처리한 상품을<br> 배송하는 중입니다.</small>
+                            <div class="bottom_txt mt-4">
+                                <p>
+                                    <b>배송지연</b>
+                                    <b class="text-danger">0</b>
+                                    건
+                                    <button type="button" class="btn btn-question" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">?</button>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <button type="button" class="tab-btn tab_item" data-tab="tabmenu_05">
+                                    <b>배송완료 <span class="text-primary">2</span></b>건
+                                </button>
+                                <button type="button" class="btn btn-question" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">?</button>
+                            </div>
+                            <small class="text-gray">상품 배송이<br> 완료되었습니다.</small>
+                        </li>
+                        <li>
+                            <div>
+                                <button type="button" class="tab-btn tab_item" data-tab="tabmenu_06">
+                                    <b>구매확정 <span class="text-primary">2</span></b>건
+                                </button>
+                                <button type="button" class="btn btn-question" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">?</button>
+                            </div>
+                            <small class="text-gray">구매확정이<br> 완료되었습니다.</small>
+                        </li>
+                    </ul>
+                    <p class="mt-2">* 조회기준 <b>최근 31일</b> 동안의 모든 주문 (단, <b>지연 및 문제</b> 건은 <b>최근 1년</b>동안의 모든 주문)</p>
+                </div>
+
+                <div class="shadow p-3 rounded mt-4">
+                    <div class="d-flex">
+                        <div class="d-flex">
+                            <select id="" class="form-select form-control small_select">
+                                <option selected hidden>주문번호</option>
+                                <option>option</option>
+                                <option>option</option>
+                            </select>
+                            <input type="text" class="form-control ml-2" placeholder="검색어 입력" style="width: 200px;">
+                            <div class="ml-3 d-flex align-items-center">
+                                <input type="date" class="form-control ml-2" style="width: 150px;">
+                                <span class="mx-1">~</span>
+                                <input type="date" class="form-control ml-2" style="width: 150px;">
+                            </div>
+                        </div>
+                        <div class="d-flex ml-4">
+                            <button type="button" class="btn btn-primary">조회</button>
+                            <button type="button" class="btn btn-border ml-2">초기화</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content">
+                    <!-- 신규주문 -->
+                    <div class="shadow p-3 rounded mt-4 tab_sect active" id="tabmenu_01">
+                        <p class="font-weight-bold">신규주문
+                            <span class="font-weight-normal">
+                                (총
+                                <b class="text-primary">2</b>
+                                건)
+                            </span>
+                        </p>
+                        <div class="mb-2">
+                            <button type="button" class="btn btn-border">발주 확인</button>
+                            <button type="button" class="btn btn-border ml-2">전체 발주확인</button>
+                        </div>
+                        <div class="fixed-table-container">
+                            <div class="fixed-table-wrapper" style="height: 500px;">
+                                <table id="tbl_employee" class="fixed-table">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <label class="form-check-label" for="flexCheckDefault"></label>
+                                                </div>
+                                            </th>
+                                            <th>
+                                                <div class="th-text">주문번호</div>
+                                            </th>
+                                            <th>
+                                                <div class="th-text">상품주문번호</div>
+                                            </th>
+                                            <th>
+                                                <div class="th-text">배송방법</div>
+                                            </th>
+                                            <th>
+                                                <div class="th-text">상태</div>
+                                            </th>
+                                            <th>
+                                                <div class="th-text">상품번호</div>
+                                            </th>
+                                            <th class="text-left">
+                                                <div class="th-text">상품명</div>
+                                            </th>
+                                            <th>
+                                                <div class="th-text">옵션명</div>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="border-bottom">
+                                            <td scope="row">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <label class="form-check-label" for="flexCheckDefault"></label>
+                                                </div>
+                                            </td>
+                                            <td scope="row">
+                                                <a href="#" class="" data-bs-toggle="modal" data-bs-target="#orderDetailModal"><u>1111111111111</u></a>
+                                            </td>
+                                            <td scope="row">
+                                                123456-7891011
+                                            </td>
+                                            <td scope="row">
+                                                택배배송
+                                            </td>
+                                            <td scope="row">
+                                                결제완료
+                                            </td>
+                                            <td scope="row">
+                                                2022
+                                            </td>
+                                            <td scope="row">
+                                                고구마고구마고구마고구마고구마고구마고구마고구마고구마고구마
+                                            </td>
+                                            <td scope="row">
+                                                고구마고구마고구마고구마고구마고구마고구마고구마고구마고구마
+                                            </td>
+                                        </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <nav aria-label="navigation" class="d-flex justify-content-center mt-5 align-items-center">
+                            <p class="mb-0 mr-3">총 222건</p>
+                            <ul class="pagination m-0">
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li class="page-item"><a class="page-link active" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <select id="" class="form-select form-control small_select ml-3">
+                                <option>50쪽</option>
+                                <option>option</option>
+                                <option>option</option>
+                            </select>
+                        </nav>
+                    </div>
+
+                    <!-- 발송대기 -->
+                    <div class="shadow p-3 rounded mt-4 tab_sect" id="tabmenu_02">
+                        <p class="font-weight-bold">발송대기
+                            <span class="font-weight-normal">
+                                (총
+                                <b class="text-primary">2</b>
+                                건)
+                            </span>
+                        </p>
+                        <div class="mb-2">
+                            <button type="button" class="btn btn-border">발주 확인</button>
+                            <button type="button" class="btn btn-border ml-2">전체 발주확인</button>
+                            <a href="#" class="btn btn-border ml-2" download="">전체 다운로드</a>
+                        </div>
+                        <div class="fixed-table-container">
+                            <div class="fixed-table-wrapper" style="height: 500px;">
+                                <table id="tbl_employee" class="fixed-table">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <label class="form-check-label" for="flexCheckDefault"></label>
+                                                </div>
+                                            </th>
+                                            <th>
+                                                <div class="th-text">주문번호</div>
+                                            </th>
+                                            <th>
+                                                <div class="th-text">상품주문번호</div>
+                                            </th>
+                                            <th>
+                                                <div class="th-text">배송방법</div>
+                                            </th>
+                                            <th>
+                                                <div class="th-text">택배사</div>
+                                            </th>
+                                            <th>
+                                                <div class="th-text">송장번호</div>
+                                            </th>
+                                            <th>
+                                                <div class="th-text">상태</div>
+                                            </th>
+                                            <th>
+                                                <div class="th-text">상품번호</div>
+                                            </th>
+                                            <th class="text-left">
+                                                <div class="th-text">상품명</div>
+                                            </th>
+                                            <th>
+                                                <div class="th-text">옵션명</div>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="border-bottom">
+                                            <td scope="row">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <label class="form-check-label" for="flexCheckDefault"></label>
+                                                </div>
+                                            </td>
+                                            <td scope="row">
+                                                <a href="#" class="" data-bs-toggle="modal" data-bs-target="#orderDetailModal"><u>1111111111111</u></a>
+                                            </td>
+                                            <td scope="row">
+                                                123456-7891011
+                                            </td>
+                                            <td scope="row">
+                                                택배배송
+                                            </td>
+                                            <td scope="row">
+                                                <select id="" class="form-select form-control ml-3" style="width:auto">
+                                                    <option>택배사 선택</option>
+                                                    <option>우체국택배</option>
+                                                    <option>cj대한통운</option>
+                                                    <option>cj대한통운cj대한통운</option>
+                                                </select>
+                                            </td>
+                                            <td scope="row">
+                                                <input type="text" class="form-control ml-2" placeholder="-제외한 숫자와 알파" style="width: 180px;">
+                                            </td>
+                                            <td scope="row">
+                                                결제완료
+                                            </td>
+                                            <td scope="row">
+                                                2022
+                                            </td>
+                                            <td scope="row">
+                                                고구마고구마고구마고구마고구마고구마고구마고구마고구마고구마
+                                            </td>
+                                            <td scope="row">
+                                                고구마고구마고구마고구마고구마고구마고구마고구마고구마고구마
+                                            </td>
+                                        </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <nav aria-label="navigation" class="d-flex justify-content-center mt-5 align-items-center">
+                            <p class="mb-0 mr-3">총 222건</p>
+                            <ul class="pagination m-0">
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li class="page-item"><a class="page-link active" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <select id="" class="form-select form-control small_select ml-3">
+                                <option>50쪽</option>
+                                <option>option</option>
+                                <option>option</option>
+                            </select>
+                        </nav>
+                    </div>
+
+                    <!-- 발송처리 완료 -->
+                    <div class="shadow p-3 rounded mt-4 tab_sect" id="tabmenu_03">
+                        <p class="font-weight-bold">발송처리 완료
+                            <span class="font-weight-normal">
+                                (총
+                                <b class="text-primary">2</b>
+                                건)
+                            </span>
+                        </p>
+                        <div class="mb-2">
+                            <button type="button" class="btn btn-border">송장수정</button>
+                            <button type="button" class="btn btn-border ml-2">송장 일괄수정</button>
+                            <a href="#" class="btn btn-border ml-2" download="">다운로드</a>
+                        </div>
+                        <div class="fixed-table-container">
+                            <div class="fixed-table-wrapper" style="height: 500px;">
+                                <table id="tbl_employee" class="fixed-table">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <label class="form-check-label" for="flexCheckDefault"></label>
+                                                </div>
+                                            </th>
+                                            <th>
+                                                <div class="th-text">주문번호</div>
+                                            </th>
+                                            <th>
+                                                <div class="th-text">상품주문번호</div>
+                                            </th>
+                                            <th>
+                                                <div class="th-text">배송방법</div>
+                                            </th>
+                                            <th>
+                                                <div class="th-text">택배사</div>
+                                            </th>
+                                            <th>
+                                                <div class="th-text">송장번호</div>
+                                            </th>
+                                            <th>
+                                                <div class="th-text">상태</div>
+                                            </th>
+                                            <th>
+                                                <div class="th-text">상품번호</div>
+                                            </th>
+                                            <th class="text-left">
+                                                <div class="th-text">상품명</div>
+                                            </th>
+                                            <th>
+                                                <div class="th-text">옵션명</div>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="border-bottom">
+                                            <td scope="row">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <label class="form-check-label" for="flexCheckDefault"></label>
+                                                </div>
+                                            </td>
+                                            <td scope="row">
+                                                <a href="#" class="" data-bs-toggle="modal" data-bs-target="#orderDetailModal"><u>1111111111111</u></a>
+                                            </td>
+                                            <td scope="row">
+                                                123456-7891011
+                                            </td>
+                                            <td scope="row">
+                                                택배배송
+                                            </td>
+                                            <td scope="row">
+                                                우체국택배
+                                            </td>
+                                            <td scope="row">
+                                                123456123456
+                                            </td>
+                                            <td scope="row">
+                                                발송처리 완료
+                                            </td>
+                                            <td scope="row">
+                                                2022
+                                            </td>
+                                            <td scope="row">
+                                                고구마고구마고구마고구마고구마고구마고구마고구마고구마고구마
+                                            </td>
+                                            <td scope="row">
+                                                고구마고구마고구마고구마고구마고구마고구마고구마고구마고구마
+                                            </td>
+                                        </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <nav aria-label="navigation" class="d-flex justify-content-center mt-5 align-items-center">
+                            <p class="mb-0 mr-3">총 222건</p>
+                            <ul class="pagination m-0">
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li class="page-item"><a class="page-link active" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <select id="" class="form-select form-control small_select ml-3">
+                                <option>50쪽</option>
+                                <option>option</option>
+                                <option>option</option>
+                            </select>
+                        </nav>
+                    </div>
+
+                    <!-- 배송중 -->
+                    <div class="shadow p-3 rounded mt-4 tab_sect" id="tabmenu_04">
+                        <p class="font-weight-bold">배송중
+                            <span class="font-weight-normal">
+                                (총
+                                <b class="text-primary">2</b>
+                                건)
+                            </span>
+                        </p>
+                        <div class="mb-2">
+                            <button type="button" class="btn btn-border">송장수정</button>
+                            <button type="button" class="btn btn-border ml-2">송장 일괄수정</button>
+                            <a href="#" class="btn btn-border ml-2" download="">다운로드</a>
+                        </div>
+                        <div class="fixed-table-container">
+                            <div class="fixed-table-wrapper" style="height: 500px;">
+                                <table id="tbl_employee" class="fixed-table">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <label class="form-check-label" for="flexCheckDefault"></label>
+                                                </div>
+                                            </th>
+                                            <th>
+                                                <div class="th-text">주문번호</div>
+                                            </th>
+                                            <th>
+                                                <div class="th-text">상품주문번호</div>
+                                            </th>
+                                            <th>
+                                                <div class="th-text">배송방법</div>
+                                            </th>
+                                            <th>
+                                                <div class="th-text">택배사</div>
+                                            </th>
+                                            <th>
+                                                <div class="th-text">송장번호</div>
+                                            </th>
+                                            <th>
+                                                <div class="th-text">상태</div>
+                                            </th>
+                                            <th>
+                                                <div class="th-text">상품번호</div>
+                                            </th>
+                                            <th class="text-left">
+                                                <div class="th-text">상품명</div>
+                                            </th>
+                                            <th>
+                                                <div class="th-text">옵션명</div>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="border-bottom">
+                                            <td scope="row">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <label class="form-check-label" for="flexCheckDefault"></label>
+                                                </div>
+                                            </td>
+                                            <td scope="row">
+                                                <a href="#" class="" data-bs-toggle="modal" data-bs-target="#orderDetailModal"><u>1111111111111</u></a>
+                                            </td>
+                                            <td scope="row">
+                                                123456-7891011
+                                            </td>
+                                            <td scope="row">
+                                                택배배송
+                                            </td>
+                                            <td scope="row">
+                                                우체국택배
+                                            </td>
+                                            <td scope="row">
+                                                123456123456
+                                            </td>
+                                            <td scope="row">
+                                                발송처리 완료
+                                            </td>
+                                            <td scope="row">
+                                                2022
+                                            </td>
+                                            <td scope="row">
+                                                고구마고구마고구마고구마고구마고구마고구마고구마고구마고구마
+                                            </td>
+                                            <td scope="row">
+                                                고구마고구마고구마고구마고구마고구마고구마고구마고구마고구마
+                                            </td>
+                                        </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <nav aria-label="navigation" class="d-flex justify-content-center mt-5 align-items-center">
+                            <p class="mb-0 mr-3">총 222건</p>
+                            <ul class="pagination m-0">
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li class="page-item"><a class="page-link active" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <select id="" class="form-select form-control small_select ml-3">
+                                <option>50쪽</option>
+                                <option>option</option>
+                                <option>option</option>
+                            </select>
+                        </nav>
+                    </div>
+
+                    <!-- 배송완료 -->
+                    <div class="shadow p-3 rounded mt-4 tab_sect" id="tabmenu_05">
+                        <p class="font-weight-bold">배송완료
+                            <span class="font-weight-normal">
+                                (총
+                                <b class="text-primary">2</b>
+                                건)
+                            </span>
+                        </p>
+                        <div class="mb-2">
+                            <a href="#" class="btn btn-border" download="">다운로드</a>
+                        </div>
+                        <div class="fixed-table-container">
+                            <div class="fixed-table-wrapper" style="height: 500px;">
+                                <table id="tbl_employee" class="fixed-table">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <label class="form-check-label" for="flexCheckDefault"></label>
+                                                </div>
+                                            </th>
+                                            <th>
+                                                <div class="th-text">주문번호</div>
+                                            </th>
+                                            <th>
+                                                <div class="th-text">상품주문번호</div>
+                                            </th>
+                                            <th>
+                                                <div class="th-text">배송방법</div>
+                                            </th>
+                                            <th>
+                                                <div class="th-text">택배사</div>
+                                            </th>
+                                            <th>
+                                                <div class="th-text">송장번호</div>
+                                            </th>
+                                            <th>
+                                                <div class="th-text">상태</div>
+                                            </th>
+                                            <th>
+                                                <div class="th-text">상품번호</div>
+                                            </th>
+                                            <th class="text-left">
+                                                <div class="th-text">상품명</div>
+                                            </th>
+                                            <th>
+                                                <div class="th-text">옵션명</div>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="border-bottom">
+                                            <td scope="row">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <label class="form-check-label" for="flexCheckDefault"></label>
+                                                </div>
+                                            </td>
+                                            <td scope="row">
+                                                <a href="#" class="" data-bs-toggle="modal" data-bs-target="#orderDetailModal"><u>1111111111111</u></a>
+                                            </td>
+                                            <td scope="row">
+                                                123456-7891011
+                                            </td>
+                                            <td scope="row">
+                                                택배배송
+                                            </td>
+                                            <td scope="row">
+                                                우체국택배
+                                            </td>
+                                            <td scope="row">
+                                                123456123456
+                                            </td>
+                                            <td scope="row">
+                                                발송처리 완료
+                                            </td>
+                                            <td scope="row">
+                                                2022
+                                            </td>
+                                            <td scope="row">
+                                                고구마고구마고구마고구마고구마고구마고구마고구마고구마고구마
+                                            </td>
+                                            <td scope="row">
+                                                고구마고구마고구마고구마고구마고구마고구마고구마고구마고구마
+                                            </td>
+                                        </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <nav aria-label="navigation" class="d-flex justify-content-center mt-5 align-items-center">
+                            <p class="mb-0 mr-3">총 222건</p>
+                            <ul class="pagination m-0">
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li class="page-item"><a class="page-link active" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <select id="" class="form-select form-control small_select ml-3">
+                                <option>50쪽</option>
+                                <option>option</option>
+                                <option>option</option>
+                            </select>
+                        </nav>
+                    </div>
+
+                    <!-- 구매확정 -->
+                    <div class="shadow p-3 rounded mt-4 tab_sect" id="tabmenu_06">
+                        <p class="font-weight-bold">구매확정
+                            <span class="font-weight-normal">
+                                (총
+                                <b class="text-primary">2</b>
+                                건)
+                            </span>
+                        </p>
+                        <div class="mb-2">
+                            <a href="#" class="btn btn-border" download="">다운로드</a>
+                        </div>
+                        <div class="fixed-table-container">
+                            <div class="fixed-table-wrapper" style="height: 500px;">
+                                <table id="tbl_employee" class="fixed-table">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <label class="form-check-label" for="flexCheckDefault"></label>
+                                                </div>
+                                            </th>
+                                            <th>
+                                                <div class="th-text">주문번호</div>
+                                            </th>
+                                            <th>
+                                                <div class="th-text">상품주문번호</div>
+                                            </th>
+                                            <th>
+                                                <div class="th-text">배송방법</div>
+                                            </th>
+                                            <th>
+                                                <div class="th-text">택배사</div>
+                                            </th>
+                                            <th>
+                                                <div class="th-text">송장번호</div>
+                                            </th>
+                                            <th>
+                                                <div class="th-text">상태</div>
+                                            </th>
+                                            <th>
+                                                <div class="th-text">상품번호</div>
+                                            </th>
+                                            <th class="text-left">
+                                                <div class="th-text">상품명</div>
+                                            </th>
+                                            <th>
+                                                <div class="th-text">옵션명</div>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="border-bottom">
+                                            <td scope="row">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <label class="form-check-label" for="flexCheckDefault"></label>
+                                                </div>
+                                            </td>
+                                            <td scope="row">
+                                                <a href="#" class="" data-bs-toggle="modal" data-bs-target="#orderDetailModal"><u>1111111111111</u></a>
+                                            </td>
+                                            <td scope="row">
+                                                123456-7891011
+                                            </td>
+                                            <td scope="row">
+                                                택배배송
+                                            </td>
+                                            <td scope="row">
+                                                우체국택배
+                                            </td>
+                                            <td scope="row">
+                                                123456123456
+                                            </td>
+                                            <td scope="row">
+                                                발송처리 완료
+                                            </td>
+                                            <td scope="row">
+                                                2022
+                                            </td>
+                                            <td scope="row">
+                                                고구마고구마고구마고구마고구마고구마고구마고구마고구마고구마
+                                            </td>
+                                            <td scope="row">
+                                                고구마고구마고구마고구마고구마고구마고구마고구마고구마고구마
+                                            </td>
+                                        </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <nav aria-label="navigation" class="d-flex justify-content-center mt-5 align-items-center">
+                            <p class="mb-0 mr-3">총 222건</p>
+                            <ul class="pagination m-0">
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li class="page-item"><a class="page-link active" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <select id="" class="form-select form-control small_select ml-3">
+                                <option>50쪽</option>
+                                <option>option</option>
+                                <option>option</option>
+                            </select>
+                        </nav>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ============================== 주문정보 상세 모달 ============================== -->
+        <div class="modal fade form_modal" id="orderDetailModal" tabindex="-1" >
+            <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header justify-content-center">
+                        <button type="button" class="btn-close border-0 bg-white" data-bs-dismiss="modal"
+                            aria-label="Close">나가기</button>
+                        <h5 class="modal-title text-center" id="exampleModalLabel">상품 주문 정보 상세</h5>
+                    </div>
+                    <div class="modal-body">
+                        <ul class="mb-4">
+                            <li>
+                                <dl class="d-flex mb-0">
+                                    <dt>주문번호</dt>
+                                    <dd class="ml-3">22222222222222</dd>
+                                </dl>
+                                <dl class="d-flex mb-0">
+                                    <dt>결제일시</dt>
+                                    <dd class="ml-3">2022.02.020(화) 오후 00:00:00</dd>
+                                </dl>
+                                <dl class="d-flex mb-0">
+                                    <dt>주문상세</dt>
+                                    <dd class="ml-3">배송완료</dd>
+                                </dl>
+                                <dl class="d-flex mb-0">
+                                    <dt>주문금액</dt>
+                                    <dd class="ml-3">30,000원</dd>
+                                </dl>
+                                <dl class="d-flex mb-0">
+                                    <dt>할인금액</dt>
+                                    <dd class="ml-3">0원</dd>
+                                </dl>
+                            </li>
+                        </ul>
+
+                        <h5>배송지 정보</h5>
+                        <ul class="mb-4">
+                            <li>
+                                <dl class="d-flex mb-0">
+                                    <dt>수취인명</dt>
+                                    <dd class="ml-3">김국룰</dd>
+                                </dl>
+                                <dl class="d-flex mb-0">
+                                    <dt>연락처</dt>
+                                    <dd class="ml-3">01011111111</dd>
+                                </dl>
+                                <dl class="d-flex mb-0">
+                                    <dt>배송지</dt>
+                                    <dd class="ml-3">서울시 강남구 테헤란로</dd>
+                                </dl>
+                                <dl class="d-flex mb-0">
+                                    <dt>요청사항</dt>
+                                    <dd class="ml-3"></dd>
+                                </dl>
+                            </li>
+                        </ul>
+
+                        <h5>주문자 정보</h5>
+                        <ul class="mb-4">
+                            <li>
+                                <dl class="d-flex mb-0">
+                                    <dt>연락처</dt>
+                                    <dd class="ml-3">01011111111</dd>
+                                </dl>
+                            </li>
+                        </ul>
+
+                        <h5>상품 정보</h5>
+                        <ul class="mb-0">
+                            <li>
+                                <dl class="d-flex mb-0">
+                                    <dt>상품명</dt>
+                                    <dd class="ml-3">호박고구마</dd>
+                                </dl>
+                                <dl class="d-flex mb-0">
+                                    <dt>옵션명</dt>
+                                    <dd class="ml-3">특/상 (3kg)</dd>
+                                </dl>
+                                <dl class="d-flex mb-0">
+                                    <dt>수량</dt>
+                                    <dd class="ml-3">1</dd>
+                                </dl>
+                            </li>
+                            <li class="border-top pt-2">
+                                <dl class="d-flex mb-0">
+                                    <dt>상품명</dt>
+                                    <dd class="ml-3">호박고구마</dd>
+                                </dl>
+                                <dl class="d-flex mb-0">
+                                    <dt>옵션명</dt>
+                                    <dd class="ml-3">특/상 (3kg)</dd>
+                                </dl>
+                                <dl class="d-flex mb-0">
+                                    <dt>수량</dt>
+                                    <dd class="ml-3">1</dd>
+                                </dl>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="modal-footer d-flex">
+                        <button type="button" class="btn btn-border" class="btn-close border-0 bg-white" data-bs-dismiss="modal"
+                        aria-label="Close">취소</button>
+                        <button type="button" class="btn btn-border" disabled>교환처리</button>
+                        <button type="button" class="btn btn-border">반품처리</button>
+                        <button type="button" class="btn btn-gray">판매취소</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script defer src="../js/bootstrap.js"></script>
+    <script defer src="../js/bootstrap.bundle.min.js"></script>
+    <script defer src="../js/common.js"></script>
+</body>
+
+</html>
